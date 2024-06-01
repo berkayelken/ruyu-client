@@ -1,8 +1,7 @@
-import { Component, OnInit, Inject, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { RouterOutlet, ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { QuestModalComponent } from './quest-modal/quest-modal.component';
 
 // @ts-ignore
 const $: any = window['$']
@@ -10,16 +9,12 @@ const $: any = window['$']
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, QuestModalComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent implements OnInit {
-  @ViewChild(QuestModalComponent) modal?: QuestModalComponent;
-
-  //href="https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A4200&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
-  //https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A4200&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain
   serverIp = "127.0.0.1"
   serverPort = "4200"
   twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F"
@@ -180,7 +175,20 @@ export class AppComponent implements OnInit {
     })
   }
 
-  private getHeaders() : HttpHeaders {
+  checkSuper() {
+    let url = this.baseUrl + "/auth/check/super/type";
+    this.httpClient.get(url , {headers: this.getHeaders()}).subscribe(res => {
+      if (!res) {
+        this.goHome()
+      }
+    })
+  }
+
+  goHome() {
+    this.router.navigate(['/home'])
+  }
+
+  getHeaders() : HttpHeaders {
     let headers = this.getDefaultHeaders()
     headers = headers.set("auth-token", "Bearer " + this.getToken());
     headers = headers.set("special", "Bearer " + this.getToken());

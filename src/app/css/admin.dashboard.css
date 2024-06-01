@@ -1,0 +1,71 @@
+.side-bar{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.top-bar {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 250px; 
+    width: calc(100% - 250px);
+    height: 80px;
+}
+
+.top-bar-name {
+    position: absolute;
+    color: rgb(31, 31, 31);
+    right: 20px;
+    top: 20px;
+}
+
+.side-bar-icon {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    width: 50px;;
+}
+
+.side-bar-navigator {
+    position: absolute;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.623);
+    top: 80px;
+    width: 250px;
+    height: calc(100% - 80);
+}
+
+.side-bar-navigator-list{
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    height: calc(100% - 20);
+}
+
+.admin-container {
+    position: absolute;
+    top: 80px;
+    left: 250px;
+    background-color: whitesmoke;
+    width: calc(100% - 250px);
+    height: calc(100% - 80px)
+}
+
+table{
+    background-color: rgb(237, 224, 224);
+}
+
+.update-button{
+    background-color: rgb(32, 132, 32);
+    color: white;
+    border: 0;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+    border: 0;
+}
