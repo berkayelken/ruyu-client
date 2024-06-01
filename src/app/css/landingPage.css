@@ -1,0 +1,379 @@
+.background-img {
+    background-image: url('../../assets/landingPage/logo-1.gif');
+    min-height: 80vh;
+    background-position: center; /* Better for centering */
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fef6e9;
+}
+
+@media (max-width:1280px) {
+    .background-img{
+        min-height: 65vh;
+    }
+}
+@media (max-width:991px) {
+    .background-img{
+        min-height: 56vh;
+    }
+}
+@media (max-width:767px) {
+    .background-img{
+        min-height: 40vh;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.logo img{ width: 40px; height: auto; }
+
+.nav-item a{ color: black; }
+
+.nav-item a:hover{ color: #0a58ca; }
+ .navbar_button { background-color: rgba(255, 103, 0, 0.6); border: 1px solid rgb(0, 0, 0); border-radius: 16px; padding: 5px; font-weight: 500; color: #ffffff ; text-decoration: none; }
+
+
+ /* scroll to top */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #E16700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #dd8237;
+}
+
+/* poup styling  */
+#openPopup {
+    padding: 10px 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 0; /* Position to the right side */
+    top: 8px; /* Position to the top */
+    width: 440px; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed or set a specific height */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+}
+@media (max-width: 913px) {
+    .popup {
+        top: 722px !important; /* Adjust the top position if needed */
+    }
+    .banner-section {
+        min-height: 95vh;
+    }
+}
+@media (max-width: 821px) {
+    .popup {
+        top: 540px !important; /* Adjust the top position if needed */
+    }
+}
+@media (max-width: 769px) {
+    .popup {
+        top: 390px !important; /* Adjust the top position if needed */
+    }
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 20px;
+    border: 1.5px solid black;
+    border-radius: 2rem;
+    width: 98%;
+    max-width: 500px;
+    position: relative;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    animation: fadeIn 0.3s;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-content .close:hover,
+.popup-content .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.custom-px-2{
+    padding-left: 2rem;
+     padding-right: 2rem;
+}
+.custom-padding{
+    padding: 1rem;
+}
+@media (max-width: 555px) {
+    .fixed-buttons img{
+        width: 35px !important;
+    }
+    #scrollToTopBtn{
+        padding: 10px 17px;
+    }
+    .custom-px-2{
+        padding-left: 0rem;
+        padding-right: 2rem;
+    }
+    .custom-padding{
+        padding: 0rem !important;
+    }
+   .popup-content{
+    width: 95% !important;
+   }
+   .popup {
+      z-index: 999 !important;
+      top: 0px !important;
+      background-color: transparent !important;
+}
+}
+.custom-modal-flex{
+    display: flex; 
+    align-items: top; 
+    justify-content: space-between; 
+    font-weight: bold;
+}
+.modal-span-text-color{
+    color: #E16700;
+}
+.how-to-row{
+    margin-top: 0rem;
+     text-align: center;   
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/* Fixed Buttons Positioned at Bottom Right */
+.fixed-buttons {
+    position: fixed;
+    bottom: 70px;
+    right: 22px;
+    text-align: right;
+    z-index: 1000;
+}
+
+.fixed-buttons a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.nft-container span {
+    font-family: 'Days One', sans-serif; /* Apply Days One font to the text */
+}
+
+.nft-container {
+    display: flex;
+    align-items: center;  /* Keeps the image and text aligned in the center vertically */
+    gap: 10px;  /* Adds space between the image and the text */
+}
+a{
+    text-decoration: none !important;
+}
+.nft-text {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: flex-start;  /* Aligns text to the left */
+}
+
+.nft-text span {
+    display: block;  /* Ensures each span takes up its own line */
+}
+
+/* Styles for the container around the NFT link and GIF */
+.fixed-buttons .nft-container {
+    background-color: rgba(221, 221, 221, 0.5); /* White background with opacity */
+    border: 0px solid rgb(48, 48, 48); /* Black border for the container */
+    border-radius: 15px; /* Rounded edges for the container */
+    padding: 8px; /* Padding inside the container */
+    display: flex; /* Use flexbox to align the image and text side by side */
+    align-items: flex; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers items horizontally */
+    gap: 10px; /* Adds space between the GIF */
+}
+
+.fixed-buttons img {
+    width: 55px; /* Resize the GIF as needed */
+    height: auto; /* Maintains the aspect ratio of the GIF */
+    border: 0px solid rgb(48, 48, 48); /* Adds border around the GIF */
+    border-radius: 5px; /* Rounded edges for the GIF */
+}
+
+/* Specific styles targeting the book icon inside the fixed buttons */
+.fixed-buttons a[href="/book"] img {
+    border: none; /* Removes any border */
+    background: none; /* Removes any background */
+}
+
+/* Alternatively, if you want to ensure no other styles affect it indirectly */
+.fixed-buttons a[href="/book"] img {
+    border: none !important;
+    background: none !important;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+@media (min-width: 1380px) {
+    .popup {
+        top: 150px !important; /* Adjust the top position if needed */
+    }
+}
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
+    .popup {
+        top: 157px !important; /* Adjust the top position if needed */
+    }
+}
+@media (max-width: 1024px) {
+    .popup {
+        top: 722px !important; /* Adjust the top position if needed */
+    }
+    .banner-section {
+        min-height: 95vh;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+    .popup {
+        top: -33px !important;
+    }
+}
+@media (max-width: 913px) {
+    .popup {
+        top: 722px !important; /* Adjust the top position if needed */
+    }
+    .banner-section {
+        min-height: 95vh;
+    }
+}
+@media (max-width: 861px) {
+    .popup {
+        top: 640px !important; /* Adjust the top position if needed */
+    }
+}
+@media (max-width: 821px) {
+    .popup {
+        top: 540px !important; /* Adjust the top position if needed */
+    }
+}
+@media (max-width: 769px) {
+    .popup {
+        top: 390px !important; /* Adjust the top position if needed */
+    }
+}
+@media (max-width: 542px) {
+    .popup {
+        top: 112px !important;
+        left: 131px !important;
+    }
+    .popup-content {
+        width: 87% !important;
+    }
+}
+
+@media (max-width: 431px) {
+    .nft-collection {
+        min-height: 84vh !important;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: -10px !important; /* Position to the right side */
+        top: 328px !important; /* Position to the top */
+        width: 440px; /* Adjust width as needed */
+        height: auto; /* Adjust height as needed or set a specific height */
+        padding: 20px; /* Add some padding */
+        border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    }
+}
+@media (max-width: 401px) {
+    .popup {
+        left: -26px !important; /* Position to the right side */
+        top: 255px !important; /* Position to the top */
+        width: 440px; /* Adjust width as needed */
+    }
+  
+}
+@media (max-width: 415px) {
+    .popup {
+        left: -9px !important;
+        top: 287px !important;
+    }
+  
+}
+@media (max-width: 391px) {
+    .popup {
+        left: -24px !important;
+        top: 238px !important;
+    }
+  
+}
+@media (max-width: 381px) {
+    .popup {
+        top: 55px !important; /* Position to the top */
+    }
+    .popup-content {
+        width: 87% !important;
+    }
+}
+@media (max-width: 361px) {
+    .popup {
+        top: 125px !important; /* Position to the top */
+        left: -42px !important;
+    }
+    .popup-content {
+        width: 87% !important;
+    }
+}
+@media (max-width: 351px) {
+    .popup {
+        top: 275px !important; /* Position to the top */
+        left: -30px !important;
+    }
+    .popup-content {
+        width: 87% !important;
+    }
+    .popup {
+   
+        width: 417px; /* Adjust width as needed */
+
+    }
+}

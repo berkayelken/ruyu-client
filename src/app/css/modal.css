@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+.quest-item h5{
+    font-size: 12px;
+    line-height:0.2 !important;
+}
+.quest-item p, .quest-item a{
+    font-size: 10px;
+    color: #000;
+}
+.modal-title{
+    font-size: 12px;
+}
+.quest-modal .modal-content {
+    border-radius: 15px;
+    padding: 2px;
+    background-color: transparent;
+}
+.quest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quest-header img {
+    width: 50px;
+    height: 50px;
+}
+.quest-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #3b82f6;
+}
+.quest-item {
+    background: #f0f0f0;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.profile-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 5px;
+}
+.profile-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.profile-card h3 {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+}
+.profile-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+}
+.profile-card .level {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.modal-content{
+    width: 80% !important;
+    border: none !important;
+}
+.weekly-sec{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 7px solid rgba(92, 170, 226, 1);
+}
+.cross-btn{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+.cross-btn button {
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+.lucky-wheel{
+    position: absolute;
+    top: -30px;
+    left: -50px ;
+}
+.weekly-text{
+    position: absolute;
+    left: 100px;
+    top: -10px;
+    text-shadow: 2px 2px #3b82f6;
+}
+.weekly-text h1{
+    font-size: 30px ;
+    font-weight: 700;
+    color: #fff;
+    transform: rotate(-5deg);
+}
+.weekly-sec2{
+    background-color: rgba(11, 11, 11, 0.63);
+    padding: 30px;
+    border-radius: 20px;
+}
+.weekly-sec2 p{
+    color: #fff;
+    font-size: 12px;
+}
+.back{
+    color: #fff;
+    font-size: 12px;
+}
+@media (min-width: 996px) {
+    .modal-content{
+      margin-left: 60px !important;
+    }
+   
+}
+@media (max-width: 996px) {
+   .profile-card{
+    margin-top: 5%;
+    width: 60%;
+   }
+   
+}
+@media (max-width: 568px) {
+    .modal-content{
+      margin-left: 20px !important;
+      width: 100% !important;
+    }
+}
+
+.back a{
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 2px 2px #3b82f6;
+    font-weight: 600
+}
+
+.TreeWheel {
+    position: relative;
+    width: 100%; /* Adjust as necessary */
+    height: 100%; /* Adjust as necessary */
+    z-index: 12;
+}
+
+.TreeWheel .img-fluid {
+    width: 100%; /* Ensure the wheel image covers the container */
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.tree_img
+{
+    z-index: 100;
+}
+.wheel_img
+{
+ z-index: -5;
+}
+.TreeWheel .inner-image {
+    position: absolute;
+    top: 52.5%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    cursor: pointer; /* Indicate the image is clickable */
+}
+.bg
+{
+    width: 55%;
+    height: 53%;
+    border-radius: 50%;
+    background-color: #e1c1b2 !important;
+    position: absolute;
+    top: 52.5%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+}
+
+.timer_topup
+{
+    z-index: 1000;
+    border-radius: 30px;
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    border: 5px solid #5CAAE2;
+    /* transform: translate(4%, -4%);    */
+}
+
+.timer_topup h4
+{
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Days One", sans-serif;
+
+}
+
+.timer_topup p{
+color: #000 !important;
+font-size: 14px;
+font-weight: 800;
+line-height: 15.28px;
+font-family: "Days One", sans-serif;
+text-align: center;
+
+}
+.timer span
+{
+letter-spacing: 3px;
+font-size: 36px;
+font-weight: 800;
+line-height: 45.83px;
+font-family: "Days One", sans-serif;
+
+}
+
+.timer span p
+{
+    color: #000 !important;
+}
+
+
+@media screen and (min-width: 568px) and (max-width: 991px) {
+
+    .timer_topup
+{
+    top: 30%;
+    left: 8%;
+}
+
+.timer_topup h4
+{
+  font-size: 16px;
+}
+
+.timer_topup p{
+font-size: 12px;
+
+}
+.timer span
+{
+font-size: 26px;
+}
+
+.timer span p
+{
+    color: #000 !important;
+}
+
+
+
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 568px) {
+
+    .timer_topup
+{
+    top: 30%;
+    left: 17%;
+}
+.timer_topup h4
+{
+  font-size: 14px;
+}
+
+.timer_topup p{
+font-size: 10px;
+
+}
+.timer span
+{
+font-size: 20px;
+}
+
+.timer span p
+{
+    color: #000 !important;
+}
+}
+
+
+@media screen and (min-width: 365px) and (max-width: 400px) {
+
+    .timer_topup
+{
+    top: 30%;
+    left: 10%;
+}
+.timer_topup h4
+{
+  font-size: 14px;
+}
+
+.timer_topup p{
+font-size: 10px;
+
+}
+.timer span
+{
+font-size: 20px;
+}
+
+.timer span p
+{
+    color: #000 !important;
+}
+}
+@media screen and (min-width: 180px) and (max-width: 365px) {
+
+    .timer_topup
+{
+    top: 30%;
+    left: 4%;
+}
+.timer_topup h4
+{
+  font-size: 14px;
+}
+
+.timer_topup p{
+font-size: 10px;
+
+}
+.timer span
+{
+font-size: 20px;
+}
+
+.timer span p
+{
+    color: #000 !important;
+}
+}
+
+
+
+
+
