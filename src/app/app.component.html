@@ -54,6 +54,8 @@
                   <h5 class="fw-bold">{{quest.name}}</h5>
                   <a>{{quest.description}}</a>
                 </div>
+                <img class="status-icon" src="../assets/modal/pending.png" *ngIf="isEnrollStatus(quest)">
+                <img class="status-icon" src="../assets/modal/success.png" *ngIf="isSuccessStatus(quest)">
               </div>
             </div>
             <div class="col-lg-4 px-2">
@@ -70,9 +72,9 @@
                 </div>
                 <div class="x-container" *ngIf="!isSignedIn()">
                     <div class="login-label fw-bold">You can login the RUYUI with X</div>
-                    <a class="sign-in-x" href="https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A4200&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain">
+                    <button class="sign-in-x" (click)="loginViaTwitter()">
                       Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.png">
-                    </a>
+                    </button>
                 </div>
 
               </div>

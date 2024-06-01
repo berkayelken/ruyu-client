@@ -30,6 +30,7 @@
     color: #3b82f6;
 }
 .quest-item {
+    position: relative;
     background: #f0f0f0;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 10px;

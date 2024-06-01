@@ -18,6 +18,7 @@ const $: any = window['$']
 export class AppComponent implements OnInit {
   @ViewChild(QuestModalComponent) modal?: QuestModalComponent;
 
+  //href="https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A4200&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
   //https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A4200&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain
   serverIp = "127.0.0.1"
   serverPort = "4200"
@@ -57,6 +58,11 @@ export class AppComponent implements OnInit {
     this.name = this.getCookie("name")
   }
 
+  loginViaTwitter() {
+    let url  = this.twitterLoginFirstPart + this.serverIp + this.twitterLoginSecondPart + this.serverPort + this.twitterLoginThirdPart
+    window.open(url);
+  }
+
   private collectUserContext() {
     console.clear()
     this.route.queryParams.subscribe((params: { [x: string]: string; }) => {
@@ -89,11 +95,22 @@ export class AppComponent implements OnInit {
   }
 
   enroll(quest: Quest) {
+    if (this.isEnrollStatus(quest) || this.isSuccessStatus(quest)) {
+      return
+    }
     if (quest.operationType === "ADD_USERNAME") {
       this.callAddUserName(quest)
     } else {
       this.callEnrollApi(quest)
     }
+  }
+
+  isEnrollStatus(quest: Quest) {
+    return "ENROLLED" === quest.statusForUser
+  }
+
+  isSuccessStatus(quest: Quest) {
+    return "SUCCEED" === quest.statusForUser
   }
 
   private callAddUserName(quest: Quest) {
