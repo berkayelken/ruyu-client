@@ -29,12 +29,12 @@ export class AdminQuestPanelComponent implements OnInit {
   }
 
   updateQuest(quest: any) {
-    this.router.navigate(['/admin/quest?id=' + quest.id])
+    this.router.navigate(['/admin/quest'], {queryParams: {id: quest.id}})
   }
 
   deleteQuest(quest: any) {
     let url = this.appComponent.baseUrl + "/quest/" + quest.id;
-    this.httpClient.delete(url, {headers: this.appComponent.getHeaders()})
+    this.httpClient.delete(url, {headers: this.appComponent.getHeaders()}).subscribe(res => this.getQuests())
   }
 
   private getQuests() {

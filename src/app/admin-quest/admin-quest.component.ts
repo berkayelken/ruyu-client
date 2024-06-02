@@ -60,7 +60,7 @@ export class AdminQuestComponent implements OnInit {
 
 
   private getQuest(id: string) {
-    let url = this.appComponent.baseUrl + "/quest/single" + id;
+    let url = this.appComponent.baseUrl + "/quest/single/" + id;
     this.name = this.appComponent.name
     this.httpClient.get(url , {headers: this.appComponent.getHeaders()}).subscribe(res => {
       this.response = res;
