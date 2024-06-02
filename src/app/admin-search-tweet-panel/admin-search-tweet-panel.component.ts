@@ -53,7 +53,13 @@ export class AdminSearchTweetPanelComponent implements OnInit {
   }
 
   approveTweetQuest(username: string) {
-    let url = this.appComponent.baseUrl + "/quest/enroll/approve/" + username + "/" + this.questId
+    if (this.questId) {
+      this.approveTweetQuestWithQuestId(username, this.questId);
+    }
+  }
+
+  approveTweetQuestWithQuestId(username: string, quest: string) {
+    let url = this.appComponent.baseUrl + "/quest/enroll/approve/" + username + "/" + quest
     this.httpClient.post(url , {}, {headers: this.appComponent.getHeaders()}).subscribe(res => {})
   }
 

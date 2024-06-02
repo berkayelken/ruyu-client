@@ -1,18 +1,30 @@
 <div class="top-bar">
     
 </div>
-<span class="top-bar-name">Berkay Admin</span>
+<span class="top-bar-name">{{name}}</span>
 <div class="side-bar">
-    <img src="./assets/images/Logo.png" class="side-bar-icon">
+    <img src="./assets/images/Logo.png" class="side-bar-icon" routerLink="/home">
     <div class="side-bar-navigator">
         <ul class="side-bar-navigator-list" style="list-style-type:none;">
-            <li>asfsaf</li>
-            <li>asfsafsaf</li>
-            <li>sagsagasgsa</li>
+            <li routerLink="/admin/quests">Quests</li>
+            <li routerLink="/admin/quest">Add Quest</li>
+            <li routerLink="/admin/wheels">Wheels</li>
+            <li routerLink="/admin/wheel">Add Wheel</li>
+            <li routerLink="/admin/approve/tweet">Give Prize to Tweet</li>
         </ul>
     </div>
 </div>
 <div class="admin-container">
-    
+<h3 class="title-area">Give Prize to Tweet</h3>
+
+<span class="name label">Twitter Username</span>
+<input type="text" class="name edit" [(ngModel)]="username">
+
+<span class="quest label">Quest Id</span>
+<input type="text" class="quest edit" [(ngModel)]="questId">
+
+
+
+<button class="save-button" (click)="approveTweet()">Approve</button>
 
 </div>

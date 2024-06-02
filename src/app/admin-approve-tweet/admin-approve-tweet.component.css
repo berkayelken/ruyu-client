@@ -1,2 +1,11 @@
 @import url("../../assets/css/style.css");
 @import url("../css/admin.dashboard.css");
+@import url("../css/admin.single.record.css");
+
+.quest{
+    top: 192px;
+}
+
+.save-button {
+    top: 292px;
+}
