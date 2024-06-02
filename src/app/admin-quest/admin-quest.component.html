@@ -1,18 +1,57 @@
 <div class="top-bar">
     
 </div>
-<span class="top-bar-name">Berkay Admin</span>
+<span class="top-bar-name">{{name}}</span>
 <div class="side-bar">
-    <img src="./assets/images/Logo.png" class="side-bar-icon">
+    <img src="./assets/images/Logo.png" class="side-bar-icon" routerLink="/home">
     <div class="side-bar-navigator">
         <ul class="side-bar-navigator-list" style="list-style-type:none;">
-            <li>asfsaf</li>
-            <li>asfsafsaf</li>
-            <li>sagsagasgsa</li>
+            <li routerLink="/admin/quests">Quests</li>
+            <li routerLink="/admin/quest">Add Quest</li>
+            <li routerLink="/admin/wheels">Wheels</li>
+            <li routerLink="/admin/wheel">Add Wheel</li>
+            <li routerLink="/admin/search/tweet">Search Tweet</li>
+            <li routerLink="/admin/approve/tweet">Give Prize to Tweet</li>
         </ul>
     </div>
 </div>
 <div class="admin-container">
-    
+<h3 class="title-area">Edit Quest</h3>
+
+<span class="name label">Name</span>
+<input type="text" class="name edit" [(ngModel)]="questName">
+
+<span class="description label">Description</span>
+<input type="text" class="description edit" [(ngModel)]="description">
+
+<span class="content label">Content</span>
+<input type="text" class="content edit" [(ngModel)]="content">
+
+<span class="platform label">Platform</span>
+<select name="platform" id="platform" class="platform edit" [(ngModel)]="platform">
+  <option *ngFor="let plat of platforms" [value]="plat.id">{{plat.text}}</option>
+</select>
+
+<span class="operation label">Operation</span>
+<select name="operation" id="operation" class="operation edit" [(ngModel)]="operation">
+  <option *ngFor="let op of operations" [value]="op.id">{{op.text}}</option>
+</select>
+
+<span class="platform-content-id label">Platform Content Id</span>
+<input type="text" class="platform-content-id edit" [(ngModel)]="contentId">
+
+<span class="prize label">Prize</span>
+<input type="number" class="prize edit" [(ngModel)]="prize">
+
+<span class="starting-date label">Start Time</span>
+<input type="date" class="starting-date edit" [(ngModel)]="startingTime">
+
+<span class="ending-date label">Ending Time</span>
+<input type="date" class="ending-date edit" [(ngModel)]="endingTime">
+
+<span class="active-check label">Active</span>
+<input type="checkbox" class="active-check edit" [(ngModel)]="active">
+
+<button class="save-button" (click)="save()">Save</button>
 
 </div>

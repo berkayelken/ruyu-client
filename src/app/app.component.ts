@@ -181,7 +181,7 @@ export class AppComponent implements OnInit {
       if (!res) {
         this.goHome()
       }
-    })
+    }, err => this.goHome())
   }
 
   goHome() {
