@@ -32,7 +32,7 @@ export class AdminQuestComponent implements OnInit {
   startingTime = ""
 
   platforms = [{id: "TWITTER", text: "Twitter"}, {id: "WALLET", text: "Wallet"}]
-  operations = [{id: "LIKE", text: "Like"}, {id: "RETWEET", text: "Retweet"}, {id: "SEND_POST", text: "Send post"}, {id: "ADD_USERNAME", text: "Add username"}, {id: "FOLLOW_ACCOUNT", text: "Follow account"}]
+  operations = [{id: "LIKE", text: "Like"}, {id: "RETWEET", text: "Retweet"}, {id: "SEND_POST", text: "Send post"}, {id: "SEND_POST_AUTO", text: "Send post with auto approve"}, {id: "ADD_USERNAME", text: "Add username"}, {id: "FOLLOW_ACCOUNT", text: "Follow account"}]
 
   constructor(private appComponent: AppComponent, private httpClient: HttpClient, private router: Router, private route: ActivatedRoute ){}
 

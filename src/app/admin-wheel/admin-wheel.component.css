@@ -1,2 +1,44 @@
 @import url("../../assets/css/style.css");
 @import url("../css/admin.dashboard.css");
+@import url("../css/admin.single.record.css");
+
+.label {
+    width: 310px;
+}
+
+.edit{
+    left: 350px;
+}
+
+.recurring{
+    top: 192px;
+}
+
+.usable-count {
+    top: 244px;
+}
+
+.pool{
+    top: 296px;
+}
+
+.party{
+    top: 348px;
+}
+
+.lower-bound{
+    top: 400px;
+}
+
+.upper-bound{
+    top: 452px;
+}
+
+.active-check{
+    top: 536px;
+}
+
+.save-button {
+    top: 636px;
+    left: 450px;
+}

@@ -3,12 +3,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { AppComponent } from '../app.component';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-admin-wheel-panel',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule],
+  imports: [MatTableModule, MatPaginatorModule, RouterOutlet, RouterLink],
   templateUrl: './admin-wheel-panel.component.html',
   styleUrl: './admin-wheel-panel.component.css'
 })
@@ -47,7 +47,5 @@ export class AdminWheelPanelComponent  implements OnInit {
       
     });
   }
-
-
-
+  
 }

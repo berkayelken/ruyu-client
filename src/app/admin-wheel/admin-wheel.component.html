@@ -1,18 +1,47 @@
 <div class="top-bar">
     
 </div>
-<span class="top-bar-name">Berkay Admin</span>
+<span class="top-bar-name">{{name}}</span>
 <div class="side-bar">
-    <img src="./assets/images/Logo.png" class="side-bar-icon">
+    <img src="./assets/images/Logo.png" class="side-bar-icon" routerLink="/home">
     <div class="side-bar-navigator">
         <ul class="side-bar-navigator-list" style="list-style-type:none;">
-            <li>asfsaf</li>
-            <li>asfsafsaf</li>
-            <li>sagsagasgsa</li>
+            <li routerLink="/admin/quests">Quests</li>
+            <li routerLink="/admin/quest">Add Quest</li>
+            <li routerLink="/admin/wheels">Wheels</li>
+            <li routerLink="/admin/wheel">Add Wheel</li>
+            <li routerLink="/admin/search/tweet">Search Tweet</li>
+            <li routerLink="/admin/approve/tweet">Give Prize to Tweet</li>
         </ul>
     </div>
 </div>
 <div class="admin-container">
-    
+<h3 class="title-area">Edit Wheel</h3>
+
+<span class="name label">Name</span>
+<input type="text" class="name edit" [(ngModel)]="wheelName">
+
+<span class="recurring label">Recurring Interval As Hours</span>
+<input type="number" class="recurring edit" [(ngModel)]="recurringTimeAsHours">
+
+<span class="usable-count label">Available Usage In Interval</span>
+<input type="number" class="usable-count edit" [(ngModel)]="usableCountInInterval">
+
+<span class="pool label">Wheel Prize Pool Size</span>
+<input type="number" class="pool edit" [(ngModel)]="prizePoolSize">
+
+<span class="party label">Single Wheel Element Count</span>
+<input type="number" class="party edit" [(ngModel)]="prizePartySize">
+
+<span class="lower-bound label">Lower Bound of Prize(Valuw will be multiply with 50)</span>
+<input type="number" class="lower-bound edit" [(ngModel)]="lowerBoundOfPrizeAsPowerOfFifty">
+
+<span class="upper-bound label">Upper Bound of Prize(Valuw will be multiply with 50)</span>
+<input type="number" class="upper-bound edit" [(ngModel)]="upperBoundOfPrizeAsPowerOfFifty">
+
+<span class="active-check label">Active</span>
+<input type="checkbox" class="active-check edit" [(ngModel)]="active">
+
+<button class="save-button" (click)="save()">Save</button>
 
 </div>

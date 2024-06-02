@@ -25,6 +25,7 @@
 
 .side-bar-icon {
     position: absolute;
+    cursor: pointer;
     top: 15px;
     left: 100px;
     width: 50px;;
@@ -68,4 +69,8 @@ table{
     background-color: red;
     color: white;
     border: 0;
+}
+
+li{
+    cursor: pointer;
 }
