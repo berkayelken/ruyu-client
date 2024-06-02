@@ -1,2 +1,25 @@
 @import url("../../assets/css/style.css");
 @import url("../css/admin.dashboard.css");
+
+table{
+    margin-top: 40px;
+    background-color: rgb(237, 224, 224);
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 120px);
+    height: 40px;
+}
+
+.search-button {
+    position: absolute;
+    top: 0;
+    right: 120px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(11, 112, 219);
+    color: white;
+}

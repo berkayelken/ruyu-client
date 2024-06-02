@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminQuestPanelComponent implements OnInit {
   
-  displayedColumns: string[] = ['name', 'thirdPartyType', 'operationType', 'prizeVolume', 'active', 'update', 'delete']
+  displayedColumns: string[] = ['name', 'thirdPartyType', 'operationType', 'prizeVolume', 'active', 'update', 'delete', 'search']
   response: any
   dataSource = []
   name = "";
@@ -45,6 +45,12 @@ export class AdminQuestPanelComponent implements OnInit {
       this.dataSource = this.response;
       this.resultsLength = this.dataSource.length
     });
+  }
+
+  searchTweet(quest: any) {
+    if("SEND_POST" === quest.operationType) {
+      this.router.navigate(['/admin/search/tweet'], {queryParams: {id: quest.id, content: quest.content}})
+    }
   }
 
 }

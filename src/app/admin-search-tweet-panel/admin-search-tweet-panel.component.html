@@ -1,18 +1,50 @@
 <div class="top-bar">
     
 </div>
-<span class="top-bar-name">Berkay Admin</span>
+<span class="top-bar-name">{{name}}</span>
 <div class="side-bar">
-    <img src="./assets/images/Logo.png" class="side-bar-icon">
+    <img src="./assets/images/Logo.png" class="side-bar-icon" routerLink="/home">
     <div class="side-bar-navigator">
         <ul class="side-bar-navigator-list" style="list-style-type:none;">
-            <li>asfsaf</li>
-            <li>asfsafsaf</li>
-            <li>sagsagasgsa</li>
+            <li routerLink="/admin/quests">Quests</li>
+            <li routerLink="/admin/quest">Add Quest</li>
+            <li routerLink="/admin/wheels">Wheels</li>
+            <li routerLink="/admin/wheel">Add Wheel</li>
+            <li routerLink="/admin/approve/tweet">Give Prize to Tweet</li>
         </ul>
     </div>
 </div>
 <div class="admin-container">
-    
+    <input type="text" [(ngModel)]="content" class="search-bar">
+    <button class="search-button" (click)="search()">Search</button>
+    <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+        <ng-container matColumnDef="authorId">
+            <th mat-header-cell *matHeaderCellDef> Tweet User Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.authorId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tweetId">
+            <th mat-header-cell *matHeaderCellDef> Tweet Id</th>
+            <td mat-cell *matCellDef="let element"> {{element.tweetId}} </td>
+        </ng-container>
+        <ng-container matColumnDef="authorUsername">
+            <th mat-header-cell *matHeaderCellDef> Author Username </th>
+            <td mat-cell *matCellDef="let element"> {{element.authorUsername}} </td>
+        </ng-container>
+        <ng-container matColumnDef="authorViewingName">
+            <th mat-header-cell *matHeaderCellDef> Author Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.authorViewingName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tweetContent">
+            <th mat-header-cell *matHeaderCellDef> Tweet </th>
+            <td mat-cell *matCellDef="let element"> {{element.tweetContent}} </td>
+        </ng-container>
+        <ng-container matColumnDef="approve">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> <button class="update-button" (click)="approveTweetQuest(element.authorUsername)">Approve</button> </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [length]="resultsLength" [pageSize]="30" aria-label="Select page of Quests"></mat-paginator>
 
 </div>
