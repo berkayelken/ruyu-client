@@ -1,18 +1,53 @@
 <div class="top-bar">
     
 </div>
-<span class="top-bar-name">Berkay Admin</span>
+<span class="top-bar-name">{{name}}</span>
 <div class="side-bar">
-    <img src="./assets/images/Logo.png" class="side-bar-icon">
+    <img src="./assets/images/Logo.png" class="side-bar-icon" routerLink="/home">
     <div class="side-bar-navigator">
         <ul class="side-bar-navigator-list" style="list-style-type:none;">
-            <li>asfsaf</li>
-            <li>asfsafsaf</li>
-            <li>sagsagasgsa</li>
+            <li routerLink="/admin/quests">Quests</li>
+            <li routerLink="/admin/quest">Add Quest</li>
+            <li routerLink="/admin/wheels">Wheels</li>
+            <li routerLink="/admin/wheel">Add Wheel</li>
+            <li routerLink="/admin/search/tweet">Search Tweet</li>
+            <li routerLink="/admin/approve/tweet">Give Prize to Tweet</li>
         </ul>
     </div>
 </div>
 <div class="admin-container">
-    
+    <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="recurringTimeAsHours">
+            <th mat-header-cell *matHeaderCellDef> Recurring Time As Hours </th>
+            <td mat-cell *matCellDef="let element"> {{element.recurringTimeAsHours}} </td>
+        </ng-container>
+        <ng-container matColumnDef="usableCountInInterval">
+            <th mat-header-cell *matHeaderCellDef> Usable Count In Interval </th>
+            <td mat-cell *matCellDef="let element"> {{element.usableCountInInterval}} </td>
+        </ng-container>
+        <ng-container matColumnDef="partySize">
+            <th mat-header-cell *matHeaderCellDef> Party Size </th>
+            <td mat-cell *matCellDef="let element"> {{element.partySize}} </td>
+        </ng-container>
+        <ng-container matColumnDef="active">
+            <th mat-header-cell *matHeaderCellDef> Active </th>
+            <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+        </ng-container>
+        <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> <button class="update-button" (click)="updateWheel(element)">Update</button> </td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> <button class="delete-button" (click)="deleteWheel(element)">Delete</button> </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [length]="resultsLength" [pageSize]="30" aria-label="Select page of Quests"></mat-paginator>
 
 </div>
