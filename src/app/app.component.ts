@@ -59,7 +59,6 @@ export class AppComponent implements OnInit {
   }
 
   private collectUserContext() {
-    console.clear()
     this.route.queryParams.subscribe((params: { [x: string]: string; }) => {
       this.code = params['code'];
       if (this.code) {
