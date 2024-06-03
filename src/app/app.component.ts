@@ -261,9 +261,47 @@ export class AppComponent implements OnInit {
   }
 
   private getToken() {
-    return this.getCookie("token")
+    let cookieToken = this.getCookie("token")
+    if (cookieToken && cookieToken.length > 0) {
+      return cookieToken;
+    }
+
+    let localStorageToken = this.getItemFromLocalStorage("token")
+    let expiresAtStr = this.getItemFromLocalStorage("expiresAt");
+    let expiresAt = Number.parseInt(expiresAtStr ? expiresAtStr : '0')
+
+    if (expiresAt > new Date().getTime() && localStorageToken && localStorageToken.length > 0) {
+      return localStorageToken;
+    } else {
+        this.deleteFromLocalStorage("token")
+        this.deleteFromLocalStorage("name")
+        this.deleteFromLocalStorage("expiresAt")
+    }
+
+    return ''
   }
 
+  private getName() {
+    let cookieName = this.getCookie("name")
+    if (cookieName && cookieName.length > 0) {
+      return cookieName;
+    }
+
+    let localStorageName = this.getItemFromLocalStorage("name")
+    if (localStorageName && localStorageName.length > 0) {
+      return localStorageName;
+    }
+
+    return ''
+  }
+
+  private getItemFromLocalStorage(fieldName: string){
+    return this.document.defaultView?.localStorage.getItem(fieldName)
+  } 
+
+  private deleteFromLocalStorage(fieldName: string) {
+    this.document.defaultView?.localStorage.removeItem(fieldName);
+  }
 
 
   private getCookie(name: string) {
@@ -289,6 +327,10 @@ export class AppComponent implements OnInit {
     this.document.cookie = `name=${this.authResponse.name}; ${expires}${cpath}`;
     this.document.cookie = `imageUrl=${this.authResponse.imageUrl}; ${expires}${cpath}`;
     this.document.cookie = `token=${this.authResponse.token}; ${expires}${cpath}`;
+    this.document.defaultView?.localStorage.setItem("token", this.authResponse.token)
+    this.document.defaultView?.localStorage.setItem("name", this.authResponse.name)
+    let time = d.getTime()
+    this.document.defaultView?.localStorage.setItem("expiresAt", time ? time.toString() : '0')
   }
 
 }

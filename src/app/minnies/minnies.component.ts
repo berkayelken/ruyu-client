@@ -32,15 +32,15 @@ export class MinniesComponent implements OnInit {
     autoplaySpeed: 1500,
     responsive: {
         0: {
-            items: 4,
+            items: 3,
             loop:true
         },
         600: {
-            items: 6,
+            items: 4,
             loop:true
         },
         1000: {
-            items: 12,
+            items: 10,
             loop:true
         }
     }
@@ -65,23 +65,4 @@ slidesStore: any[] = [];
     this.activeSlides = data;
   }
 
-  private injectScript(src: string) {
-    if (this.document && src?.trim()) {
-      const script = this.document.createElement("script");
-      script.setAttribute("type", "text/javascript");
-      script.setAttribute("src", src.trim());
-      this.document.head?.appendChild(script);
-    }
-  }
-
-  private injectScriptWithIntegrity(src: string, integrity: string, crossorigin: string) {
-    if (this.document && src?.trim()) {
-      const script = this.document.createElement("script");
-      script.setAttribute("type", "text/javascript");
-      script.setAttribute("src", src.trim());
-      script.setAttribute("integrity", integrity);
-      script.setAttribute("crossorigin", crossorigin);
-      this.document.head?.appendChild(script);
-    }
-  }
 }
