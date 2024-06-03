@@ -1,6 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
 import { SlidesOutputData, OwlOptions } from 'ngx-owl-carousel-o';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -48,9 +47,7 @@ export class MinniesComponent implements OnInit {
 activeSlides: SlidesOutputData = {};
 slidesStore: any[] = [];
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     for(let i = 0; i < 22; i++) {
@@ -58,8 +55,6 @@ slidesStore: any[] = [];
       this.slidesStore.push({id: i, src: image})
     }
   }
-
-
 
   getPassedData(data: SlidesOutputData) {
     this.activeSlides = data;
