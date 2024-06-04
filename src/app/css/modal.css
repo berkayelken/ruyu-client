@@ -37,11 +37,16 @@
     margin-bottom: 10px;
 }
 .profile-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
+    background-image: url("../../assets/modal/quest-back-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     padding: 5px;
 }
+.login-background {
+    background-image: url("../../assets/modal/quest-back-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} 
 .profile-card img {
     width: 70px;
     height: 70px;
@@ -51,6 +56,7 @@
 .profile-card h3 {
     margin: 0;
     font-size: 12px;
+    font-weight: bold;
     color: #000;
 }
 .profile-card p {
@@ -58,9 +64,30 @@
     font-size: 12px;
     color: #000;
 }
-.profile-card .level {
+
+.username {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.profile-card {
+    color: #000;
+    text-shadow: 0.5px 0.5px rgba(26, 25, 25, 0.404);
+}
+
+.balance-container {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 70px;
+    height: 80px;
+}
+
+.level {
     font-size: 38px;
     font-weight: bold;
+    color: white;
 }
 
 .modal-content{
@@ -68,10 +95,11 @@
     border: none !important;
 }
 .weekly-sec{
-    background-color: #fff;
     padding: 20px;
-    border-radius: 20px;
-    border: 7px solid rgba(92, 170, 226, 1);
+    background-image: url("../../assets/modal/quest-back-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
 }
 .cross-btn{
     position: absolute;

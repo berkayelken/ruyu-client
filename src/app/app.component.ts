@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.collectUserContext();
-    this.name = this.getCookie("name")
+    this.name = this.getName()
   }
 
   loginViaTwitter() {
@@ -231,12 +231,11 @@ export class AppComponent implements OnInit {
       headers: headers
     }).subscribe(res => {
       this.wheelContentResponse = res
-      this.currentPrize = this.wheelContentResponse.currentPrize
+      this.currentPrize = this.wheelContentResponse.currentPrize ? this.wheelContentResponse.currentPrize : 0
+      this.tokenBalance += this.currentPrize;
       this.nextAvailableTime = this.wheelContentResponse.nextTurningTimeCounter + new Date().getTime()
       let index = this.wheelContentResponse.currentIndex;
-      let deg = 30 * index +3600
-      
-      
+      let deg = 30 * index + 3600
       this.rotateWheel(-deg, "transform 5s ease-out")
        setTimeout(() => {
         this.wheelAvailable = this.wheelContentResponse.wheelTurningAvailable

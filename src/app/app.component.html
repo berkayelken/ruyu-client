@@ -15,11 +15,11 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="lucky-wheel" (click)="openWheelModal()" *ngIf="isSignedIn()">
-            <img src="assets/modal/LUCKY 1.png" class="w-50" alt="lucky-wheel">
+            <img src="assets/modal/LUCKY 2.png" class="w-50" alt="lucky-wheel" style="width: 5px;">
           </div>
           <div class="cross-btn">
             <button type="button" data-bs-dismiss="modal" aria-label="Close">
-              <img src="assets/modal/cross-btn.png" class="w-50" alt="cross-btn">
+              <img src="assets/modal/quest-cross-btn.png" class="w-50" alt="cross-btn">
             </button>
           </div>
           <div class="weekly-text">
@@ -93,11 +93,11 @@
             <a (click)="goBackToFirstModal()">Go back to Quest Page</a>
           </div>
           <div class="lucky-wheel">
-            <img src="assets/modal/LUCKY 1.png" class="w-50" alt="lucky-wheel">
+            <img src="assets/modal/LUCKY 2.png" class="w-50" alt="lucky-wheel">
           </div>
           <div class="cross-btn" style="top: 2px;">
             <button type="button" data-bs-dismiss="modal" aria-label="Close">
-              <img src="assets/modal/cross-btn.png" class="w-50" alt="cross-btn">
+              <img src="assets/modal/quest-cross-btn.png" class="w-50" alt="cross-btn">
             </button>
           </div>
           <div class="row">
@@ -140,14 +140,23 @@
 
             <div class="col-lg-4 px-2">
               <div class="profile-card d-flex">
-                <div class="mx-2">
-                  <img src="assets/modal/PFP.png" alt="Profile Image">
-                  <h3>{{name}}</h3>
+                <div *ngIf="isSignedIn()">
+                  <div class="mx-2">
+                    <img src="assets/modal/PFP.png" alt="Profile Image">
+                    <span class="username">{{name}}</span>
+                  </div>
+                  <div class="mx-2">
+                    <p class="text-nowrap fw-bold">LEVEL <span class="level">{{level}}</span></p>
+                    <p class="text-nowrap fw-bold">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
+                  </div>
                 </div>
-                <div class="mx-2">
-                  <p class="text-nowrap fw-bold">LEVEL <span class="level">{{level}}</span></p>
-                  <p class="text-nowrap fw-bold">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
+                <div class="x-container login-background" *ngIf="!isSignedIn()">
+                    <div class="login-label fw-bold">You can login the RUYUI with X</div>
+                    <button class="sign-in-x" (click)="loginViaTwitter()">
+                      Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.png">
+                    </button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -159,7 +168,7 @@
 
   <div class="fixed-buttons">
     <a id="questModal" data-bs-toggle="modal" data-bs-target="#questModal" (click)="openQuestModal()"><img
-        src="assets/minnies/book_icon.png" alt="Book Icon"></a>
+        src="assets/minnies/QuestBook2.png" alt="Book Icon"></a>
     <a routerLink="nftcollection">
       <div class="nft-container">
         <img src="assets/minnies/gif.gif" alt="NFT">
