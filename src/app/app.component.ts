@@ -15,13 +15,11 @@ const $: any = window['$']
 })
 
 export class AppComponent implements OnInit {
-  serverIp = "127.0.0.1"
-  serverPort = "4200"
-  twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri=http%3A%2F%2F"
-  twitterLoginSecondPart = "%3A";
-  twitterLoginThirdPart = "&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
+  server = "http://139.59.157.143:80"
+  twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri="
+  twitterLoginSecondPart = "&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
 
-  twitterLoginPath = this.twitterLoginFirstPart + this.serverIp + this.twitterLoginSecondPart + this.serverPort + this.twitterLoginThirdPart
+  twitterLoginPath = this.twitterLoginFirstPart + encodeURIComponent(this.server) + this.twitterLoginSecondPart
 
   authCookiePath = "RUYU_AUTH_CREDENTIALS"
   title = 'ruyu-client';
@@ -54,8 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   loginViaTwitter() {
-    let url  = this.twitterLoginFirstPart + this.serverIp + this.twitterLoginSecondPart + this.serverPort + this.twitterLoginThirdPart
-    window.open(url);
+    window.open(this.twitterLoginPath);
   }
 
   private collectUserContext() {

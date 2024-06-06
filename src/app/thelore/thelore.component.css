@@ -1,3 +1,5 @@
+@import "../css/modal.css";
+
 *{
     margin: 0;
     padding: 0;
@@ -87,7 +89,7 @@ body{
 }  
 .banner-content{
     width: 580px;
-    height: 250px;
+    height: 260px;
     background: rgba(54, 54, 54, 0.5);
     border-radius: 40px;
     bottom: 100px;
@@ -115,7 +117,7 @@ body{
     }
     .banner-content{
         width: 320px;
-        height: 120px;
+        height: 265px;
         background: rgba(54, 54, 54, 0.5);
         border-radius: 40px;
         bottom: 120px;
@@ -132,7 +134,7 @@ body{
 @media (max-width: 431px) {
 .banner-content{
     width: 260px;
-    height: 255px;
+    height: 315px;
 }
 .banner-section {
     min-height: 92vh !important;

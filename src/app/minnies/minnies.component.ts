@@ -31,7 +31,7 @@ export class MinniesComponent implements OnInit {
     autoplaySpeed: 1500,
     responsive: {
         0: {
-            items: 3,
+            items: 2,
             loop:true
         },
         600: {
