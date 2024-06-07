@@ -80,7 +80,7 @@ body{
 /* banner-section */
 .banner-section{
     position: relative;
-    background-image: url('../../assets/THELORE/SunriseAndCharacter.jpg');
+    background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -219,7 +219,7 @@ body{
 }
 .banner-section3{
     position: relative;
-    background-image: url('../../assets/THELORE/SunriseAndCharacter.jpg');
+    background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

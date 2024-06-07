@@ -39,7 +39,7 @@ body{
 /* banner-section */
 .banner-section{
     position: relative;
-    background-image: url('../../assets/minnies/minniestable.jpg');
+    background-image: url('../../assets/minnies/minniestable.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
