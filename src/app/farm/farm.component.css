@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     
-    background-image: url("../../assets/farm/PinBoardWide.png");
+    background-image: url("../../assets/farm/PinBoardWide.webp");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center, center;
@@ -36,6 +36,6 @@
 
 @media only screen and (max-width: 1080px) {
     .farm-content {
-       background-image: url("../../assets/farm/PinBoardTight.png");
+       background-image: url("../../assets/farm/PinBoardTight.webp");
     }
 }

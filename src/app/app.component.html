@@ -6,11 +6,11 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="lucky-wheel" (click)="openWheelModal()" *ngIf="isSignedIn()">
-            <img src="assets/modal/LUCKY 2.png" class="w-50" alt="lucky-wheel" style="width: 5px;">
+            <img src="assets/modal/LUCKY 2.webp" class="w-50" alt="lucky-wheel" style="width: 5px;">
           </div>
           <div class="cross-btn">
             <button type="button" data-bs-dismiss="modal" aria-label="Close">
-              <img src="assets/modal/quest-cross-btn.png" class="w-50" alt="cross-btn">
+              <img src="assets/modal/quest-cross-btn.webp" class="w-50" alt="cross-btn">
             </button>
           </div>
           <div class="weekly-text">
@@ -22,7 +22,7 @@
               </p>
               <div class="quest-item d-flex align-items-center pt-3" *ngFor="let quest of noLoggedInQuests" style="filter: blur(8px);">
                 <div class="mx-3 d-flex flex-column align-items-center">
-                  <img src="assets/modal/coin 1.png" alt="coin-icon" class="w-50">
+                  <img src="assets/modal/coin 1.webp" alt="coin-icon" class="w-50">
                   <p>9999</p>
                 </div>
                 <div class="mx-3">
@@ -36,22 +36,22 @@
               </p>
               <div class="quest-item d-flex align-items-center pt-3" *ngFor="let quest of quests" (click)="enroll(quest)">
                 <div class="mx-3 d-flex flex-column align-items-center">
-                  <img src="assets/modal/coin 1.png" alt="coin-icon" class="w-50">
+                  <img src="assets/modal/coin 1.webp" alt="coin-icon" class="w-50">
                   <p>{{quest.prizeVolume}}</p>
                 </div>
                 <div class="mx-3">
                   <h5 class="fw-bold">{{quest.name}}</h5>
                   <a>{{quest.description}}</a>
                 </div>
-                <img class="status-icon" src="../assets/modal/pending.png" *ngIf="isEnrollStatus(quest)">
-                <img class="status-icon" src="../assets/modal/success.png" *ngIf="isSuccessStatus(quest)">
+                <img class="status-icon" src="../assets/modal/pending.webp" *ngIf="isEnrollStatus(quest)">
+                <img class="status-icon" src="../assets/modal/success.webp" *ngIf="isSuccessStatus(quest)">
               </div>
             </div>
             <div class="col-lg-4 px-2">
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="assets/modal/PFP.png" alt="Profile Image">
+                    <img src="assets/modal/PFP.webp" alt="Profile Image">
                     <h3>{{name}}</h3>
                   </div>
                   <div class="mx-2">
@@ -62,7 +62,7 @@
                 <div class="x-container" *ngIf="!isSignedIn()">
                     <div class="login-label fw-bold">You can login the RUYUI with X</div>
                     <button class="sign-in-x" (click)="loginViaTwitter()">
-                      Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.png">
+                      Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.webp">
                     </button>
                 </div>
 
@@ -84,11 +84,11 @@
             <a (click)="goBackToFirstModal()">Go back to Quest Page</a>
           </div>
           <div class="lucky-wheel">
-            <img src="assets/modal/LUCKY 2.png" class="w-50" alt="lucky-wheel">
+            <img src="assets/modal/LUCKY 2.webp" class="w-50" alt="lucky-wheel">
           </div>
           <div class="cross-btn" style="top: 2px;">
             <button type="button" data-bs-dismiss="modal" aria-label="Close">
-              <img src="assets/modal/quest-cross-btn.png" class="w-50" alt="cross-btn">
+              <img src="assets/modal/quest-cross-btn.webp" class="w-50" alt="cross-btn">
             </button>
           </div>
           <div class="row">
@@ -111,15 +111,15 @@
                 </div>
               </div>
               <div class="TreeWheel">
-                <img src="assets/modal/TreeWheel-Tree.png" alt="TreeWheel-Tree" class="img-fluid " id="tree_img">
+                <img src="assets/modal/TreeWheel-Tree.webp" alt="TreeWheel-Tree" class="img-fluid " id="tree_img">
                 <div class="bg"></div>
                 <div class="inner-image" id="wheel_img">
-                  <img src="assets/modal/TreeWheel-Wheel.png" alt="Inner Image" class="img-fluid" id="wheel_spinner">
+                  <img src="assets/modal/TreeWheel-Wheel.webp" alt="Inner Image" class="img-fluid" id="wheel_spinner">
                   <div class="img-fluid-2" id="wheel_slice_container" (click)="turnWheel()">
 
                     <div *ngFor="let item of wheelValues">
                       <div class="{{item.className}}">
-                         <span><img src="assets/modal/coin 1.png" alt="coin-icon" style="width: 15px; margin-left: 18px;"> {{item.value}}</span>
+                         <span><img src="assets/modal/coin 1.webp" alt="coin-icon" style="width: 15px; margin-left: 18px;"> {{item.value}}</span>
                       </div>
                     </div>
                   </div>
@@ -133,7 +133,7 @@
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="assets/modal/PFP.png" alt="Profile Image">
+                    <img src="assets/modal/PFP.webp" alt="Profile Image">
                     <span class="username">{{name}}</span>
                   </div>
                   <div class="mx-2">
@@ -144,7 +144,7 @@
                 <div class="x-container login-background" *ngIf="!isSignedIn()">
                     <div class="login-label fw-bold">You can login the RUYUI with X</div>
                     <button class="sign-in-x" (click)="loginViaTwitter()">
-                      Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.png">
+                      Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.webp">
                     </button>
                 </div>
 
@@ -159,7 +159,7 @@
 
   <div class="fixed-buttons">
     <a id="questModal" data-bs-toggle="modal" data-bs-target="#questModal" (click)="openQuestModal()"><img
-        src="assets/minnies/QuestBook2.png" alt="Book Icon"></a>
+        src="assets/minnies/QuestBook2.webp" alt="Book Icon"></a>
     <a routerLink="nftcollection">
       <div class="nft-container">
         <img src="assets/minnies/gif.gif" alt="NFT">
