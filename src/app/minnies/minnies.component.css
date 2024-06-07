@@ -515,7 +515,7 @@ body{
 /* banner-section2 */
 .banner-section2{
     position: relative;
-    background-image: url('../../assets/minnies/VoxelWorldNoText.png');
+    background-image: url('../../assets/minnies/VoxelWorldNoText.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
