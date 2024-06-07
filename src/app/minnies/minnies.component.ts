@@ -51,7 +51,7 @@ slidesStore: any[] = [];
 
   ngOnInit(): void {
     for(let i = 0; i < 22; i++) {
-      let image = this.sildePicTemplate + i + ".png";
+      let image = this.sildePicTemplate + i + ".webp";
       this.slidesStore.push({id: i, src: image})
     }
   }
