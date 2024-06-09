@@ -260,7 +260,8 @@
     z-index: 1000;
     border-radius: 30px;
     position: absolute;
-    top: 40%;
+    top: 20%;
+    left: 10%;
     background-color: white;
     border: 5px solid #5CAAE2;
     /* transform: translate(4%, -4%);    */
