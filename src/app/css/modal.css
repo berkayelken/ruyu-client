@@ -47,10 +47,12 @@
 }
 
 .profile-card {
+    position: relative;
     background-image: url("../../assets/modal/quest-back-1.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 5px;
+    font-family: 'Days One';
 }
 
 .login-background {
@@ -80,26 +82,37 @@
 }
 
 .username {
-    margin-top: 15px;
-    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 90px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .profile-card {
+    height: 130px;
     color: #000;
     text-shadow: 0.5px 0.5px rgba(26, 25, 25, 0.404);
 }
 
 .balance-container {
     position: absolute;
-    top: 10px;
-    left: 80px;
+    top: 50px;
+    left: 95px;
     width: 70px;
     height: 80px;
+    font-size: 15px;
 }
 
 .level {
-    font-size: 38px;
+    position: absolute;
+    left: 95px;
+    top: 10px;
+    font-size: 15px;
+}
+
+.level-value {
+    font-size: 24px;
     font-weight: bold;
     color: white;
 }

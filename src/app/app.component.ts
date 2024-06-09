@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   title = 'ruyu-client';
   baseUrl = "http://139.59.157.143:8080/api"
   name = ""
+  imageUrl = "";
   authResponse: any;
 
   nextAvailableTime = 0;
@@ -48,7 +49,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.collectUserContext();
-    this.name = this.getName()
+    this.name = this.getName();
+    this.imageUrl = this.getImageUrl();
   }
 
   loginViaTwitter() {
@@ -291,6 +293,20 @@ export class AppComponent implements OnInit {
     return ''
   }
 
+  private getImageUrl() {
+    let cookieName = this.getCookie("imageUrl")
+    if (cookieName && cookieName.length > 0) {
+      return cookieName;
+    }
+
+    let localStorageName = this.getItemFromLocalStorage("imageUrl")
+    if (localStorageName && localStorageName.length > 0) {
+      return localStorageName;
+    }
+
+    return ''
+  }
+
   private getItemFromLocalStorage(fieldName: string){
     return this.document.defaultView?.localStorage.getItem(fieldName)
   } 
@@ -325,6 +341,7 @@ export class AppComponent implements OnInit {
     this.document.cookie = `token=${this.authResponse.token}; ${expires}${cpath}`;
     this.document.defaultView?.localStorage.setItem("token", this.authResponse.token)
     this.document.defaultView?.localStorage.setItem("name", this.authResponse.name)
+    this.document.defaultView?.localStorage.setItem("imageUrl", this.authResponse.imageUrl)
     let time = d.getTime()
     this.document.defaultView?.localStorage.setItem("expiresAt", time ? time.toString() : '0')
   }

@@ -34,8 +34,14 @@
 }
 
 
-@media only screen and (max-width: 1080px) {
+@media screen and (orientation:portrait) {
     .farm-content {
-       background-image: url("../../assets/farm/PinBoardTight.webp");
-    }
+        background-image: url("../../assets/farm/PinBoardTight.webp");
+     }
+}
+
+@media screen and (orientation:landscape) {
+    .farm-content {
+        background-image: url("../../assets/farm/PinBoardWide.webp");
+     }
 }

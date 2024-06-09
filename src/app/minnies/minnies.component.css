@@ -40,9 +40,9 @@ body{
 .banner-section{
     position: relative;
     background-image: url('../../assets/minnies/minniestable.webp');
-    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center, center;
     background-attachment: fixed;
     min-height: 100vh;
 }  

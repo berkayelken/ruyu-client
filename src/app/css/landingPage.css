@@ -312,6 +312,7 @@ a{
     .nft-collection {
         min-height: 84vh !important;
     }
+
     .popup {
         display: none;
         position: fixed;

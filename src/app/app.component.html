@@ -18,8 +18,7 @@
           </div>
           <div class="row">
             <div class="col-lg-8 weekly-sec" *ngIf="!isSignedIn()">
-              <p class="modal-title fw-bold text-center mb-2 pt-2">Please Login to with X to See and Join The Weekly Quests
-              </p>
+              <p class="modal-title fw-bold text-center mb-2 pt-2"></p>
               <div class="quest-item d-flex align-items-center pt-3" *ngFor="let quest of noLoggedInQuests" style="filter: blur(8px);">
                 <div class="mx-3 d-flex flex-column align-items-center">
                   <img src="assets/modal/coin 1.webp" alt="coin-icon" class="w-50">
@@ -51,12 +50,12 @@
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="assets/modal/PFP.webp" alt="Profile Image">
-                    <h3>{{name}}</h3>
+                    <img src="{{imageUrl}}" alt="Profile Image">
+                    <p class="text-nowrap fw-bold level">LEVEL <span class="level-value">{{level}}</span></p>
+                    <p class="text-nowrap fw-bold balance-container">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
                   </div>
                   <div class="mx-2">
-                    <p class="text-nowrap fw-bold">LEVEL <span class="level">{{level}}</span></p>
-                    <p class="text-nowrap fw-bold">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
+                    <span class="username">{{name}}</span>
                   </div>
                 </div>
                 <div class="x-container" *ngIf="!isSignedIn()">
@@ -116,14 +115,12 @@
                 <div class="inner-image" id="wheel_img">
                   <img src="assets/modal/TreeWheel-Wheel.webp" alt="Inner Image" class="img-fluid" id="wheel_spinner">
                   <div class="img-fluid-2" id="wheel_slice_container" (click)="turnWheel()">
-
                     <div *ngFor="let item of wheelValues">
                       <div class="{{item.className}}">
                          <span><img src="assets/modal/coin 1.webp" alt="coin-icon" style="width: 15px; margin-left: 18px;"> {{item.value}}</span>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
               <p class=" text-center">Spin the wheel to get your daily ROW Points!</p>
@@ -133,21 +130,20 @@
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="assets/modal/PFP.webp" alt="Profile Image">
-                    <span class="username">{{name}}</span>
+                    <img src="{{imageUrl}}" alt="Profile Image">
+                    <p class="text-nowrap fw-bold level">LEVEL <span class="level-value">{{level}}</span></p>
+                    <p class="text-nowrap fw-bold balance-container">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
                   </div>
                   <div class="mx-2">
-                    <p class="text-nowrap fw-bold">LEVEL <span class="level">{{level}}</span></p>
-                    <p class="text-nowrap fw-bold">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
+                    <span class="username">{{name}}</span>
                   </div>
                 </div>
-                <div class="x-container login-background" *ngIf="!isSignedIn()">
+                <div class="x-container" *ngIf="!isSignedIn()">
                     <div class="login-label fw-bold">You can login the RUYUI with X</div>
                     <button class="sign-in-x" (click)="loginViaTwitter()">
                       Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.webp">
                     </button>
                 </div>
-
               </div>
             </div>
           </div>
