@@ -50,7 +50,7 @@
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="{{imageUrl}}" alt="Profile Image">
+                    <img [src]="imageUrl" alt="Profile Image">
                     <p class="text-nowrap fw-bold level">LEVEL <span class="level-value">{{level}}</span></p>
                     <p class="text-nowrap fw-bold balance-container">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
                   </div>
@@ -59,7 +59,6 @@
                   </div>
                 </div>
                 <div class="x-container" *ngIf="!isSignedIn()">
-                    <div class="login-label fw-bold">You can login the RUYUI with X</div>
                     <button class="sign-in-x" (click)="loginViaTwitter()">
                       Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.webp">
                     </button>
@@ -130,7 +129,7 @@
               <div class="profile-card d-flex">
                 <div *ngIf="isSignedIn()">
                   <div class="mx-2">
-                    <img src="{{imageUrl}}" alt="Profile Image">
+                    <img [src]="imageUrl" alt="Profile Image">
                     <p class="text-nowrap fw-bold level">LEVEL <span class="level-value">{{level}}</span></p>
                     <p class="text-nowrap fw-bold balance-container">$ROW: <span class="px-1"></span> {{tokenBalance}}</p>
                   </div>
@@ -139,7 +138,6 @@
                   </div>
                 </div>
                 <div class="x-container" *ngIf="!isSignedIn()">
-                    <div class="login-label fw-bold">You can login the RUYUI with X</div>
                     <button class="sign-in-x" (click)="loginViaTwitter()">
                       Login with <img style="position: relative; top: 4px; right: -5px; width: 20px; height: auto; border-radius: 0px 0px 0px 0px;" src="assets/modal/twitter-2.webp">
                     </button>

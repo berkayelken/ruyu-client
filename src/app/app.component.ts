@@ -334,14 +334,18 @@ export class AppComponent implements OnInit {
   private setCookie() {
     let d: Date = new Date();
     d.setTime(d.getTime() + this.authResponse.expiresAt);
+    let imageUrl: string = this.authResponse.imageUrl;
+    if (imageUrl.endsWith("_normal.jpg")) {
+      imageUrl = imageUrl.substring(0, imageUrl.length- 11) + ".jpg";
+    }
     let expires: string = `expires=${d.toUTCString()}`;
     let cpath: string = `; path=${this.authCookiePath}`;
     this.document.cookie = `name=${this.authResponse.name}; ${expires}${cpath}`;
-    this.document.cookie = `imageUrl=${this.authResponse.imageUrl}; ${expires}${cpath}`;
+    this.document.cookie = `imageUrl=${imageUrl}; ${expires}${cpath}`;
     this.document.cookie = `token=${this.authResponse.token}; ${expires}${cpath}`;
     this.document.defaultView?.localStorage.setItem("token", this.authResponse.token)
     this.document.defaultView?.localStorage.setItem("name", this.authResponse.name)
-    this.document.defaultView?.localStorage.setItem("imageUrl", this.authResponse.imageUrl)
+    this.document.defaultView?.localStorage.setItem("imageUrl", imageUrl)
     let time = d.getTime()
     this.document.defaultView?.localStorage.setItem("expiresAt", time ? time.toString() : '0')
   }

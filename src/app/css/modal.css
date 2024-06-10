@@ -260,8 +260,8 @@
     z-index: 1000;
     border-radius: 30px;
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 35%;
+    left: 5%;
     background-color: white;
     border: 5px solid #5CAAE2;
     /* transform: translate(4%, -4%);    */
@@ -300,11 +300,6 @@
 
 @media screen and (min-width: 568px) and (max-width: 991px) {
 
-    .timer_topup {
-        top: 30%;
-        left: 8%;
-    }
-
     .timer_topup h4 {
         font-size: 16px;
     }
@@ -330,8 +325,8 @@
 @media screen and (min-width: 400px) and (max-width: 568px) {
 
     .timer_topup {
-        top: 30%;
-        left: 17%;
+        top: 25%;
+        left: 15%;
     }
 
     .timer_topup h4 {
@@ -350,13 +345,29 @@
     .timer span p {
         color: #000 !important;
     }
+
+    .username {
+        font-size: 12px;
+    }
+
+    .balance-container {
+        font-size: 12px;
+    }
+    
+    .level {
+        font-size: 12px;
+    }
+    
+    .level-value {
+        font-size: 20px;
+    }
 }
 
 
 @media screen and (min-width: 365px) and (max-width: 400px) {
 
     .timer_topup {
-        top: 30%;
+        top: 22.5%;
         left: 10%;
     }
 
@@ -376,13 +387,29 @@
     .timer span p {
         color: #000 !important;
     }
+
+    .username {
+        font-size: 10px;
+    }
+
+    .balance-container {
+        font-size: 10px;
+    }
+    
+    .level {
+        font-size: 10px;
+    }
+    
+    .level-value {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 180px) and (max-width: 365px) {
 
     .timer_topup {
-        top: 30%;
-        left: 4%;
+        top: 22.5%;
+        left: 8%;
     }
 
     .timer_topup h4 {
