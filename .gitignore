@@ -19,6 +19,10 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.crt
+*.key
+*.p7b
+*.ca-bundle
 
 # Visual Studio Code
 .vscode/*
