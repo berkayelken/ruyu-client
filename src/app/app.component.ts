@@ -15,11 +15,16 @@ const $: any = window['$']
 })
 
 export class AppComponent implements OnInit {
-  server = "http://139.59.157.143:80"
+  server = "http://www.ruyui.com"
   twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri="
   twitterLoginSecondPart = "&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
 
   twitterLoginPath = this.twitterLoginFirstPart + encodeURIComponent(this.server) + this.twitterLoginSecondPart
+
+  noFooterPages: Array<any> = [{ path: "/home", startsWith: false },
+  { path: "/farm", startsWith: false },
+  { path: "/admin", startsWith: true }]
+
 
   authCookiePath = "RUYU_AUTH_CREDENTIALS"
   title = 'ruyu-client';
@@ -45,7 +50,7 @@ export class AppComponent implements OnInit {
   quests: Array<Quest> = [];
   code: string | undefined;
 
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private router: Router, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private router: Router, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.collectUserContext();
@@ -109,10 +114,10 @@ export class AppComponent implements OnInit {
   private callAddUserName(quest: Quest) {
     let url = this.baseUrl + "/quest/enroll/add/platform" + quest.id
     let headers = this.getHeaders();
-    let body = {questId: quest.id, platform: quest.thirdPartyType, identifierForPlatform: ""}// this will be added
+    let body = { questId: quest.id, platform: quest.thirdPartyType, identifierForPlatform: "" }// this will be added
     this.httpClient.post(url, body, {
       headers: headers
-    }).subscribe(res => {})
+    }).subscribe(res => { })
   }
 
   private callEnrollApi(quest: Quest) {
@@ -137,10 +142,12 @@ export class AppComponent implements OnInit {
       this.tokenBalance = user.balance;
       this.quests = []
       for (let activeQuest of this.questResponse.active) {
-        let questItem: Quest = {id: activeQuest.id, name: activeQuest.name, description: activeQuest.description, thirdPartyType: activeQuest.thirdPartyType,
-          operationType: activeQuest.operationType, prizeVolume: activeQuest.prizeVolume, 
-          redirectUrl: activeQuest.redirectUrl, statusForUser: activeQuest.statusForUser}
-          this.quests.push(questItem)
+        let questItem: Quest = {
+          id: activeQuest.id, name: activeQuest.name, description: activeQuest.description, thirdPartyType: activeQuest.thirdPartyType,
+          operationType: activeQuest.operationType, prizeVolume: activeQuest.prizeVolume,
+          redirectUrl: activeQuest.redirectUrl, statusForUser: activeQuest.statusForUser
+        }
+        this.quests.push(questItem)
       }
     });
 
@@ -156,7 +163,7 @@ export class AppComponent implements OnInit {
       this.wheelContentResponse = res
       let selectedPrizesParty = this.wheelContentResponse.selectedPrizesParty;
       let index = 0;
-      for(let wheelItemValue of selectedPrizesParty) {
+      for (let wheelItemValue of selectedPrizesParty) {
         let wheelItemForUI: WheelItem = { id: index, className: "number position-" + index, value: wheelItemValue };
         index++;
         this.wheelValues.push(wheelItemForUI);
@@ -164,10 +171,10 @@ export class AppComponent implements OnInit {
       this.nextAvailableTime = this.wheelContentResponse.nextTurningTimeCounter + new Date().getTime()
       this.wheelAvailable = this.wheelContentResponse.wheelTurningAvailable
       this.currentPrize = this.wheelContentResponse.totalBenefit
-      if(!this.wheelAvailable) {
+      if (!this.wheelAvailable) {
         this.setTimerForWheel()
       }
-     
+
       $(document.getElementById('questModal')).modal('hide');
       $(document.getElementById('wheelModal')).modal('show');
     })
@@ -175,7 +182,7 @@ export class AppComponent implements OnInit {
 
   checkSuper() {
     let url = this.baseUrl + "/auth/check/super/type";
-    this.httpClient.get(url , {headers: this.getHeaders()}).subscribe(res => {
+    this.httpClient.get(url, { headers: this.getHeaders() }).subscribe(res => {
       if (!res) {
         this.goHome()
       }
@@ -186,7 +193,7 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  getHeaders() : HttpHeaders {
+  getHeaders(): HttpHeaders {
     let headers = this.getDefaultHeaders()
     headers = headers.set("auth-token", "Bearer " + this.getToken());
     headers = headers.set("special", "Bearer " + this.getToken());
@@ -206,7 +213,7 @@ export class AppComponent implements OnInit {
   }
 
   turnWheel() {
-    if(this.wheelAvailable) {
+    if (this.wheelAvailable) {
       this.callTurnWheel()
     }
   }
@@ -216,7 +223,7 @@ export class AppComponent implements OnInit {
     let wheel_slice_container = this.document.getElementById('wheel_slice_container')!;
     let value = Math.ceil(deg);
     let sliceVal = value + 45;
-    
+
     wheel.style.transition = transition;
     wheel.style.transform = "rotate(" + value + "deg)";
     wheel_slice_container.style.transition = transition;
@@ -236,12 +243,12 @@ export class AppComponent implements OnInit {
       let index = this.wheelContentResponse.currentIndex;
       let deg = 30 * index + 3600
       this.rotateWheel(-deg, "transform 5s ease-out")
-       setTimeout(() => {
+      setTimeout(() => {
         this.wheelAvailable = this.wheelContentResponse.wheelTurningAvailable
-        if(!this.wheelAvailable) {
+        if (!this.wheelAvailable) {
           this.setTimerForWheel()
         }
-      },5500)
+      }, 5500)
     })
   }
 
@@ -271,9 +278,9 @@ export class AppComponent implements OnInit {
     if (expiresAt > new Date().getTime() && localStorageToken && localStorageToken.length > 0) {
       return localStorageToken;
     } else {
-        this.deleteFromLocalStorage("token")
-        this.deleteFromLocalStorage("name")
-        this.deleteFromLocalStorage("expiresAt")
+      this.deleteFromLocalStorage("token")
+      this.deleteFromLocalStorage("name")
+      this.deleteFromLocalStorage("expiresAt")
     }
 
     return ''
@@ -307,9 +314,9 @@ export class AppComponent implements OnInit {
     return ''
   }
 
-  private getItemFromLocalStorage(fieldName: string){
+  private getItemFromLocalStorage(fieldName: string) {
     return this.document.defaultView?.localStorage.getItem(fieldName)
-  } 
+  }
 
   private deleteFromLocalStorage(fieldName: string) {
     this.document.defaultView?.localStorage.removeItem(fieldName);
@@ -336,7 +343,7 @@ export class AppComponent implements OnInit {
     d.setTime(d.getTime() + this.authResponse.expiresAt);
     let imageUrl: string = this.authResponse.imageUrl;
     if (imageUrl.endsWith("_normal.jpg")) {
-      imageUrl = imageUrl.substring(0, imageUrl.length- 11) + ".jpg";
+      imageUrl = imageUrl.substring(0, imageUrl.length - 11) + ".jpg";
     }
     let expires: string = `expires=${d.toUTCString()}`;
     let cpath: string = `; path=${this.authCookiePath}`;
@@ -348,6 +355,24 @@ export class AppComponent implements OnInit {
     this.document.defaultView?.localStorage.setItem("imageUrl", imageUrl)
     let time = d.getTime()
     this.document.defaultView?.localStorage.setItem("expiresAt", time ? time.toString() : '0')
+  }
+
+  hasFooter() {
+    let url = this.router.url;
+    if (!url) {
+      return false;
+    }
+    for (let noFooterPage of this.noFooterPages) {
+      if (noFooterPage.startsWith && url.startsWith(noFooterPage.path)) {
+        return false;
+      }
+       
+      if(!noFooterPage.startsWith && url === noFooterPage.path) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
 }
