@@ -16,12 +16,12 @@ import { AdminApproveTweetComponent } from './admin-approve-tweet/admin-approve-
 
 
 export const routes: Routes = [{ path: 'home', component: HomeComponent },
-{ path: 'farm', component: FarmComponent },
-{ path: 'minnies', component: MinniesComponent },
-{ path: 'nftcollection', component: NftcollectionComponent },
-{ path: 'studio', component: StudioComponent },
-{ path: 'team', component: TeamComponent },
-{ path: 'thelore', component: TheloreComponent },
+{ path: 'farm', component: FarmComponent, data: { title: 'FARM $ROW' } },
+{ path: 'minnies', component: MinniesComponent , data: { title: 'MINNIES' }},
+{ path: 'nftcollection', component: NftcollectionComponent , data: { title: 'RUYUI NFT' }},
+{ path: 'studio', component: StudioComponent ,data: { title: 'STUDIO' }},
+{ path: 'team', component: TeamComponent, data: { title: 'TEAM' }},
+{ path: 'thelore', component: TheloreComponent ,data: { title: 'THE LORE' }},
 { path: 'admin/quests', component: AdminQuestPanelComponent },
 { path: 'admin/quest', component: AdminQuestComponent },
 { path: 'admin/wheels', component: AdminWheelPanelComponent },

@@ -1,7 +1,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { RouterOutlet, ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { RouterOutlet, ActivatedRoute, Router, NavigationEnd, RouterLink } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { filter, map } from 'rxjs/operators';
+
+
 
 // @ts-ignore
 const $: any = window['$']
@@ -14,6 +18,7 @@ const $: any = window['$']
   styleUrl: './app.component.css'
 })
 
+
 export class AppComponent implements OnInit {
   server = "https://www.ruyui.com"
   twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri="
@@ -21,8 +26,8 @@ export class AppComponent implements OnInit {
 
   twitterLoginPath = this.twitterLoginFirstPart + encodeURIComponent(this.server) + this.twitterLoginSecondPart
 
-  noFooterPages: Array<any> = [{ path: "/home", startsWith: false },
-  { path: "/farm", startsWith: false },
+  noFooterPages: Array<any> = [
+  
   { path: "/admin", startsWith: true }]
 
 
@@ -50,13 +55,52 @@ export class AppComponent implements OnInit {
   quests: Array<Quest> = [];
   code: string | undefined;
 
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private router: Router, @Inject(DOCUMENT) private document: Document) { }
+  constructor(private route: ActivatedRoute,  private titleService: Title,
+     private httpClient: HttpClient, private router: Router, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.collectUserContext();
     this.name = this.getName();
     this.imageUrl = this.getImageUrl();
+    this.hideLoader();
+    this.setPageTitle();
   }
+  
+  setPageTitle() {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => {
+          let child = this.route.firstChild;
+          while (child) {
+            if (child.firstChild) {
+              child = child.firstChild;
+            } else if (child.snapshot.data && child.snapshot.data['title']) {
+              return child.snapshot.data['title'];
+            } else {
+              return null;
+            }
+          }
+          return null;
+        })
+      )
+      .subscribe((title: string | null) => {
+        if (title) {
+          this.titleService.setTitle(`${title} - RUYUI STUDIOS`);
+        } else {
+          this.titleService.setTitle('RUYUI STUDIOS');
+        }
+      });
+  }
+
+    hideLoader() {
+      setTimeout(() => {
+        const loader = this.document.getElementById('loader');
+        if (loader) {
+          loader.style.display = 'none';
+        }
+      }, 1500); // Adjust the delay as needed (1000 ms = 1 second)
+    }
 
   loginViaTwitter() {
     window.open(this.twitterLoginPath);
