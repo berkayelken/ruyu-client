@@ -1,29 +1,69 @@
-@import url("../css/modal.css");
+@import "../css/modal.css";
 
-.farm-content {
-    width: 100vw;
-    height: 100vh;
-    
-    background-image: url("../../assets/farm/PinBoardWide.webp");
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center, center;
-   
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+/* navbar */
+.logo img{
+    width: 40px;
+    height: auto;
 }
 
 .nav-item a{
+    font-family: 'Montserrat', sans-serif;
     color: black;
 }
 .navbar-nav{
-    background-color: rgba(255, 255, 255, 0.633);
+    background-color: rgba(221, 221, 221, 0.5);
     border-radius: 20px;
 }
 
 .nav-item a:hover{
     color: #0a58ca;
 }
+.custom-toggler .navbar-toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    position: relative;
+  }
+  button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+  .custom-toggler .navbar-toggler-icon::before,
+  .custom-toggler .navbar-toggler-icon::after,
+  .custom-toggler .navbar-toggler-icon span {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .custom-toggler .navbar-toggler-icon::before {
+    top: 0;
+  }
+  
+  .custom-toggler .navbar-toggler-icon::after {
+    bottom: 0;
+  }
+  
+  .custom-toggler .navbar-toggler-icon span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
 .navbar_button
 {
+    font-family: 'Montserrat', sans-serif;
     background-color: rgba(255, 103, 0, 0.6);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 16px;
@@ -32,16 +72,77 @@
     color: #ffffff ;
     text-decoration: none;
 }
+@media (max-width: 768px) {
+    .navbar-nav{
+        margin-top: 12px !important; 
+    }
+}
 
 
+/* banner-section */
+.banner-section{
+    position: relative;
+    background-image: url("../../assets/farm/PinBoardWide.webp"); ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}  
+.banner-content{
+    width: 580px;
+    height: 260px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    bottom: 100px;
+    left: 70px;
+    position: absolute;
+}
+.banner-content h1{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Days One', sans-serif;
+}
+.banner-content p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; /* Adjust font size if necessary */
+    color: #ffffff;
+    font-weight: 400;
+}
+@media (max-width: 568px) {
+    .fixed-buttons img{
+        width: 35px !important;
+    }
+    #scrollToTopBtn{
+        padding: 10px 17px;
+    }
+    .banner-content{
+        width: 320px;
+        height: 265px;
+        background: rgba(54, 54, 54, 0.5);
+        border-radius: 40px;
+        bottom: 120px;
+        left: 40px;
+        position: absolute;
+    }
+    .banner-content h1{
+        font-size: 14px;
+    }
+    .banner-content p{
+        font-size: 12px; /* Adjust font size if necessary */
+    }
+}
+
+    
 @media screen and (orientation:portrait) {
-    .farm-content {
+    .banner-section {
         background-image: url("../../assets/farm/PinBoardTight.webp");
      }
 }
 
 @media screen and (orientation:landscape) {
-    .farm-content {
+    .banner-section {
         background-image: url("../../assets/farm/PinBoardWide.webp");
      }
 }

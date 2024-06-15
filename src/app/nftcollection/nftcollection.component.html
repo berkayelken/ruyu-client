@@ -1,240 +1,305 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NFTCollection</title>
-    <link rel="stylesheet" href="../css/modal.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NFTCollection</title>
+  <link rel="stylesheet" href="../css/modal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .random-images img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .random-images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style></head>
+<body>
+ 
+  <button id="scrollToTopBtn">↑</button>
+  <section class="banner-section">
     <nav class="navbar navbar-expand-lg px-lg-5 pt-3">
-        <div class="container-fluid logo">
-            <a routerLink="/home">
-                <img src="../../assets/RuyuiLogo.webp" alt="BootstrapBrain Logo" width="40"
-                    style="width: 40px;" class="img-fluid">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item ms-2"> <a class="nav-link" aria-current="page" routerLink="/thelore">THE
-                            LORE</a> </li>
-                    <li class="nav-item ms-2"> <a class="nav-link" routerLink="/minnies">MINNIES</a> </li>
-                    <li class="nav-item ms-2"> <a class="nav-link" routerLink="/team">TEAM</a> </li>
-                    <li class="nav-item ms-2"> <a class="nav-link" routerLink="/studio">THE STUDIO</a> </li>
-                </ul>
-                <form class="d-flex justify-content-center ms-3"> <a routerLink="/farm" class="navbar_button">FARM
-                        $ROW</a> </form>
-            </div>
+      <div class="container-fluid logo">
+        <a routerLink="/home">
+          <img src="../../assets/RuyuiLogo.webp" alt="BootstrapBrain Logo" width="40" style="width: 40px;"
+            class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-2"> <a class="nav-link" aria-current="page" routerLink="/thelore">THE
+                LORE</a> </li>
+            <li class="nav-item ms-2"> <a class="nav-link" routerLink="/minnies">MINNIES</a> </li>
+            <li class="nav-item ms-2"> <a class="nav-link" routerLink="/team">TEAM</a> </li>
+            <li class="nav-item ms-2"> <a class="nav-link" routerLink="/studio">THE STUDIO</a> </li>
+          </ul>
+          <form class="d-flex justify-content-center ms-3"> <a routerLink="/farm" class="navbar_button">FARM
+              $ROW</a> </form>
         </div>
+      </div>
     </nav>
-      <section class="mt-5 position-relative " style="overflow:hidden; font-family: Days One;" >
-        <div class="container pt-lg-5" >
-            <div class="row custom_height ">
-                <div class="col-lg-6">
-                  <div class="d-none d-lg-block">
-                    <p class="text-lg-start text-center d-none d-lg-block"  style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
-                    <p class="text-lg-start text-center d-none d-lg-block">
-                        9,999 unique characters created with over 400 traits, waiting for you to find the gates and join Bob’s journey.
-                    </p>
-                  </div>
-
-                    
-            <div class="image-gallery position-relative mt-0 mt-lg-5">
-                <img src="../../../assets/nftcollection/Honorary_Base.webp" alt="Description 1" class="image-custom image1 ">
-                <img src="../../../assets/nftcollection/toly.webp" alt="Description 2" class="image-custom image2">
-                <img src="../../../assets/nftcollection/pranksy.webp" alt="Description 3" class="image-custom image3">
-                <img src="../../../assets/nftcollection/jonahblake.webp" alt="Description 1" class="image-custom image4">
-                <img src="../../../assets/nftcollection/Honorary_Bearsnake.webp" alt="Description 2" class="image-custom image5">
-                <img src="../../../assets/nftcollection/charl3s.webp" alt="Description 3" class="image-custom image6">
-                <img src="../../../assets/nftcollection/Honorary_Deekay.webp" alt="Description 1" class="image-custom image7">
-            </div>
-            <div class="d-block d-lg-none mt-0 mt-md-4 mt-lg-0">
-              <p class="text-lg-start text-center" style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
-              <p class="text-lg-start text-center">
-                  9,999 unique characters created with over 400 traits, waiting for you to find the gates and join Bob’s journey.
-              </p>
-            </div>
-                   
-                </div>
-                
-                <div class="col-lg-6 d-lg-block d-none" >  
-                    <div class="gif-container" >        
-                    <img src="../../../assets/nftcollection/thread.webp" alt="Scene-1" class="multi-gif img-fluid">
-                    <img src="../../../assets/nftcollection/raj.webp" alt="Scene-2" class="multi-gif img-fluid">
-                    <img src="../../../assets/nftcollection/ray-9gag.webp" alt="Scene-3" class="multi-gif img-fluid">
-                    <img src="../../../assets/nftcollection/beanie.webp" alt="Scene-4" class="multi-gif img-fluid">
-                    <img src="../../../assets/nftcollection/Honorary_Dingaling.webp" alt="Scene-5" class="multi-gif img-fluid">
-                </div>
-            </div>  
-           
-                </div>
-            </div>
-      </section>
-      <section style="overflow: hidden;">
-        <div class="row position-relative set_Custom_height" style="overflow-x: hidden;"> 
-          <div class="col-lg-6 d-lg-none d-block" >  
-            <div class="gif-container" >        
-            <img src="../../../assets/nftcollection/thread.webp" alt="Scene-1" class="multi-gif img-fluid">
-            <img src="../../../assets/nftcollection/raj.webp" alt="Scene-2" class="multi-gif img-fluid">
-            <img src="../../../assets/nftcollection/ray-9gag.webp" alt="Scene-3" class="multi-gif img-fluid">
-            <img src="../../../assets/nftcollection/beanie.webp" alt="Scene-4" class="multi-gif img-fluid">
-            <img src="../../../assets/nftcollection/Honorary_Dingaling.webp" alt="Scene-5" class="multi-gif img-fluid">
-        </div>
-    </div>
-        </div>
-        
-      </section>
-
-      <!-- ====================2nd section==================== -->
-
-      
-      <div class="mt-5 container-fluid px-0 pb-0 position-relative d-lg-block d-none overflow-hidden">
-        <img src="../../../assets/nftcollection/WebsiteTree.webp" class="website-tree" alt="">
-        <img src="../../../assets/nftcollection/allassets.webp" class="all-sets" alt="">
-        <img src="../../../assets/nftcollection/Group.webp" class="arrow_img" alt="">
-        <h1 class="position-absolute fw-bold text-dark roadmap-title">RUYUI STUDIOS 2024 ROADMAP</h1>
-        <h3 class="fw-bold side_text">MORE ANIMATED CONTENT</h3>
-        <b class="position-absolute fw-bold text-dark text-heading block1">December 2023</b>
-        <div class="position-absolute text-wrapper block1-content">
-            <p class="mb-1 fw-bold">Minnies OG Collection Launch</p>
-            <p>    •   Nifty Island Integration <br>
-                •   CC0 License Release <br>
-                •  3D Files Distribution</p>
-        </div>
-        
-        <b class="position-absolute fw-bold text-dark text-heading block2">Q2 2024</b>
-        <div class="position-absolute text-wrapper block2-content">
-            <p class="mb-1 fw-bold">$ROW Point System Activated</p>
-            <p>    •   Content Creation Award System Activated <br>
-                • Point Utility System Activated</p>
-        </div>
-        <div class="position-absolute text-wrapper block2-more-content">
-            <p class="mb-1 fw-bold">Ruyui Honoraries</p>
-            <p>    •   Honorary collection distribution</p>
-        </div>
-        
-        <b class="position-absolute fw-bold text-dark text-heading block3">Q3 2024</b>
-        <div class="position-absolute text-wrapper block3-content">
-            <p>    •   Discord & Telegram Launch <br>
-                • Social Media Launch
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-8">
+          <div class="banner-content d-flex flex-column justify-content-start p-4">
+            <h1>RUYUI NFT Collection</h1>
+            <p>9,999 unique characters created with over 00 traits, waiting for you to find the gates and join Bob’s
+              journey.
             </p>
-        </div>
-        <div class="position-absolute text-wrapper block3-more-content1">
-            <p class="mb-1 fw-bold">Launch with Magic Eden</p>
-        </div>
-        <div class="position-absolute text-wrapper block3-more-content2">
-            <p class="mb-1">Limited Edition Figurines</p>
-        </div>
-        <div class="position-absolute text-wrapper block3-more-content3">
-            <p class="mb-1">Ruyui Studios IRL Company Launch</p>
+          </div>
         </div>
         
-        <b class="position-absolute fw-bold text-dark text-heading block4">Q4 2024</b>
-        <div class="position-absolute text-wrapper block4-content">
-            <p class="mb-1 fw-bold">3D AVATARS</p>
-            <p>    •   Download your 3D Files <br>
-                • Create your own 3D Models from given traits</p>
-        </div>
-        <div class="position-absolute text-wrapper block4-more-content">
-            <p class="mb-1 fw-bold">RUYUI STORE</p>
-            <p>    •   Access to all types of merch <br>
-                •    Customize your figurines <br>
-                • Collab Merchandise</p>
-        </div>
+      </div>
+    </div>
+  </section>
+<!--<section class="slider">
+
+<div class="slider-container owl-carousel owl-theme">
+  <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" style="width: 100%;">
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide [id]="slide.id">
+        <img [src]="slide.src">
         
-        <b class="position-absolute fw-bold text-dark text-heading block5">H1 2024</b>
-        <div class="position-absolute text-wrapper block5-content">
-            <p class="mb-1 fw-bold">Multiplayer Platformer Game</p>
-            <p>    •   First co-op game
-            <br> <br>
-                Release of the Pixel Avatars
-            <br><br>
-                •  Use your pixel avatars in game <br>
-                •   Get the sprites for other metaverse platforms</p>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</div>
+
+</section>-->
+<section class="mt-5 position-relative" style="overflow:hidden; font-family: Days One;">
+  <div class="container pt-lg-5">
+      <div class="row custom_height">
+          <div class="col-lg-6">
+              <div class="d-none d-lg-block">
+                  <p class="text-lg-start text-center d-none d-lg-block" style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
+                  <p class="text-lg-start text-center d-none d-lg-block">
+                      9,999 unique characters created with over 400 traits, waiting for you to find the gates and join Bob’s journey.
+                  </p>
+              </div>
+              <div class="image-gallery position-relative mt-0 mt-lg-5">
+                  <img src="../../../assets/nftcollection/Honorary_Base.webp" alt="Description 1" class="image-custom image1">
+                  <img src="../../../assets/nftcollection/toly.webp" alt="Description 2" class="image-custom image2">
+                  <img src="../../../assets/nftcollection/pranksy.webp" alt="Description 3" class="image-custom image3">
+                  <img src="../../../assets/nftcollection/jonahblake.webp" alt="Description 1" class="image-custom image4">
+                  <img src="../../../assets/nftcollection/Honorary_Bearsnake.webp" alt="Description 2" class="image-custom image5">
+                  <img src="../../../assets/nftcollection/charl3s.webp" alt="Description 3" class="image-custom image6">
+                  <img src="../../../assets/nftcollection/Honorary_Deekay.webp" alt="Description 1" class="image-custom image7">
+              </div>
+              <div class="d-block d-lg-none mt-0 mt-md-4 mt-lg-0">
+                  <p class="text-lg-start text-center" style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
+                  <p class="text-lg-start text-center">
+                      9,999 unique characters created with over 400 traits, waiting for you to find the gates and join Bob’s journey.
+                  </p>
+              </div>
+          </div>
+          <div class="col-lg-6 d-lg-block d-none">
+            <div class="gif-container">
+                <img id="gif1" alt="Scene-1" class="multi-gif img-fluid">
+                <img id="gif2" alt="Scene-2" class="multi-gif img-fluid">
+                <img id="gif3" alt="Scene-3" class="multi-gif img-fluid">
+                <img id="gif4" alt="Scene-4" class="multi-gif img-fluid">
+                <img id="gif5" alt="Scene-5" class="multi-gif img-fluid">
+            </div>
         </div>
+      </div>
+  </div>
+</section>
+
+    <!-- ====================2nd section==================== -->
+    
+    
+    <section class="mt-5 container-fluid px-0 pb-0 position-relative d-lg-block d-none overflow-hidden">
+      <img src="../../../assets/nftcollection/WebsiteTree.webp" class="website-tree" alt=""> 
+      <img src="../../../assets/nftcollection/allassets.webp" class="all-sets" alt="">
+      <img src="../../../assets/nftcollection/Group.webp" class="arrow_img" alt="">
+      <h1 class="position-absolute fw-bold text-dark roadmap-title">RUYUI STUDIOS 2024 ROADMAP</h1>
+      <h3 class="fw-bold side_text">MORE ANIMATED CONTENT</h3>
+      <b class="position-absolute fw-bold text-dark text-heading block1">December 2023</b>
+      <div class="position-absolute text-wrapper block1-content">
+          <p class="mb-1 fw-bold">Minnies OG Collection Launch</p>
+          <p>    •   Nifty Island Integration <br>
+              •   CC0 License Release <br>
+              •  3D Files Distribution</p>
       </div>
       
+      <b class="position-absolute fw-bold text-dark text-heading block2">Q2 2024</b>
+      <div class="position-absolute text-wrapper block2-content">
+          <p class="mb-1 fw-bold">$ROW Point System Activated</p>
+          <p>    •   Content Creation Award System Activated <br>
+              • Point Utility System Activated</p>
+      </div>
+      <div class="position-absolute text-wrapper block2-more-content">
+          <p class="mb-1 fw-bold">Ruyui Honoraries</p>
+          <p>    •   Honorary collection distribution</p>
+      </div>
+      
+      <b class="position-absolute fw-bold text-dark text-heading block3">Q3 2024</b>
+      <div class="position-absolute text-wrapper block3-content">
+          <p>    •   Discord & Telegram Launch <br>
+              • Social Media Launch
+          </p>
+      </div>
+      <div class="position-absolute text-wrapper block3-more-content1">
+          <p class="mb-1 fw-bold">RUYUI NFT Collection Launch</p>
+      </div>
+      <div class="position-absolute text-wrapper block3-more-content2">
+          <p class="mb-1">Limited Edition Figurines</p>
+      </div>
+      <div class="position-absolute text-wrapper block3-more-content3">
+          <p class="mb-1">Ruyui Studios IRL Company Launch</p>
+      </div>
+      
+      <b class="position-absolute fw-bold text-dark text-heading block4">Q4 2024</b>
+      <div class="position-absolute text-wrapper block4-content">
+          <p class="mb-1 fw-bold">3D AVATARS</p>
+          <p>    •   Download your 3D Files <br>
+              • Create your own 3D Models from given traits</p>
+      </div>
+      <div class="position-absolute text-wrapper block4-more-content">
+          <p class="mb-1 fw-bold">RUYUI STORE</p>
+          <p>    •   Access to all types of merch <br>
+              •    Customize your figurines <br>
+              • Collab Merchandise</p>
+      </div>
+      
+      <b class="position-absolute fw-bold text-dark text-heading block5">H1 2024</b>
+      <div class="position-absolute text-wrapper block5-content">
+          <p class="mb-1 fw-bold">Multiplayer Platformer Game</p>
+          <p>    •   First co-op game
+          <br> <br>
+              Release of the Pixel Avatars
+          <br><br>
+              •  Use your pixel avatars in game <br>
+              •   Get the sprites for other metaverse platforms</p>
+      </div>
+    
+    
 
-  <h1 class="text-center d-block d-lg-none px-3">RUYUI STUDIOS 2024 ROADMAP</h1>
-   <div class="bg_img position-relative d-block d-lg-none" style="overflow: hidden;">
-    <img src="../../../assets/nftcollection/Group.webp" class="set_image_position" alt="">
-    <img src="../../../assets/nftcollection/Group13617.webp" class="set_image_position1" alt="">
-    <div class="container-fluid">
-      <h3 class="fw-bold side_text">MORE ANIMATED CONTENT</h3>
-      <h4 class="fw-bold text-center pt-4 side_text1">MORE ANIMATED CONTENT</h4>
-      <b class="section-heading december-2023">December 2023</b>
-      <div class="december-2023-details">
-        <p class="mb-1 fw-bold">Minnies OG Collection Launch</p>
-        <p>
-          • Nifty Island Integration <br>
-          • CC0 License Release <br>
-          • 3D Files Distribution
-        </p>
-      </div>
-    
-      <b class="section-heading q2-2024">Q2 2024</b>
-      <div class="q2-2024-details">
-        <p class="mb-1 fw-bold">$ROW Point System Activated</p>
-        <p>
-          • Content Creation Award System Activated <br>
-          • Point Utility System Activated
-        </p>
-      </div>
-      <div class="ruyui-honoraries">
-        <p class="mb-1 fw-bold">Ruyui Honoraries</p>
-        <p>• Honorary collection distribution</p>
-      </div>
-    
-      <b class="section-heading q3-2024">Q3 2024</b>
-      <div class="q3-2024-details">
-        <p class="mb-1 fw-bold">Ruyui Honoraries</p>
-        <p>
-          • Discord & Telegram Launch <br>
-          • Social Media Launch
-        </p>
-      </div>
-      <div class="launch-magic-eden">
-        <p class="mb-1 fw-bold">Launch with Magic Eden</p>
-      </div>
-      <div class="limited-edition-figurines">
-        <p class="mb-1">Limited Edition Figurines</p>
-      </div>
-      <div class="ruyui-studios-irl">
-        <p class="mb-1">Ruyui Studios IRL Launch</p>
-      </div>
-    
-      <b class="section-heading q4-2024">Q4 2024</b>
-      <div class="q4-2024-details">
-        <p class="mb-1 fw-bold">3D AVATARS</p>
-        <p>
-          • Download your 3D Files <br>
-          • Create your own 3D Models <br> from given traits
-        </p>
-      </div>
-      <div class="ruyui-store">
-        <p class="mb-1 fw-bold">RUYUI STORE</p>
-        <p>
-          • Access to all types of merch <br>
-          • Customize your figurines <br>
-          • Collab Merchandise
-        </p>
-      </div>
-    
-      <b class="section-heading h1-2024">H1 2024</b>
-      <div class="h1-2024-details">
-        <p class="mb-1 fw-bold">Multiplayer Platformer Game</p>
-        <p>
-          • First co-op game <br><br>
-          Release of the Pixel Avatars <br><br>
-          • Use your pixel avatars in game <br>
-          • Get the sprites for metaverse  platforms
-        </p>
-      </div>
+<h1 class="text-center d-block d-lg-none px-3">RUYUI STUDIOS 2024 ROADMAP</h1>
+ <div class="bg_img position-relative d-block d-lg-none" style="overflow: hidden;">
+  <img src="../../../assets/nftcollection/Group.webp" class="set_image_position" alt="">
+  <img src="../../../assets/nftcollection/Group13617.webp" class="set_image_position1" alt="">
+  <div class="container-fluid">
+    <h3 class="fw-bold side_text">MORE ANIMATED CONTENT</h3>
+    <h4 class="fw-bold text-center pt-4 side_text1">MORE ANIMATED CONTENT</h4>
+    <b class="section-heading december-2023">December 2023</b>
+    <div class="december-2023-details">
+      <p class="mb-1 fw-bold">Minnies OG Collection Launch</p>
+      <p>
+        • Nifty Island Integration <br>
+        • CC0 License Release <br>
+        • 3D Files Distribution
+      </p>
+    </div>
+  
+    <b class="section-heading q2-2024">Q2 2024</b>
+    <div class="q2-2024-details">
+      <p class="mb-1 fw-bold">$ROW Point System Activated</p>
+      <p>
+        • Content Creation Award System Activated <br>
+        • Point Utility System Activated
+      </p>
+    </div>
+    <div class="ruyui-honoraries">
+      <p class="mb-1 fw-bold">Ruyui Honoraries</p>
+      <p>• Honorary collection distribution</p>
+    </div>
+  
+    <b class="section-heading q3-2024">Q3 2024</b>
+    <div class="q3-2024-details">
+      <p class="mb-1 fw-bold">Ruyui Honoraries</p>
+      <p>
+        • Discord & Telegram Launch <br>
+        • Social Media Launch
+      </p>
+    </div>
+    <div class="launch-magic-eden">
+      <p class="mb-1 fw-bold">Launch with Magic Eden</p>
+    </div>
+    <div class="limited-edition-figurines">
+      <p class="mb-1">Limited Edition Figurines</p>
+    </div>
+    <div class="ruyui-studios-irl">
+      <p class="mb-1">Ruyui Studios IRL Launch</p>
+    </div>
+  
+    <b class="section-heading q4-2024">Q4 2024</b>
+    <div class="q4-2024-details">
+      <p class="mb-1 fw-bold">3D AVATARS</p>
+      <p>
+        • Download your 3D Files <br>
+        • Create your own 3D Models <br> from given traits
+      </p>
+    </div>
+    <div class="ruyui-store">
+      <p class="mb-1 fw-bold">RUYUI STORE</p>
+      <p>
+        • Access to all types of merch <br>
+        • Customize your figurines <br>
+        • Collab Merchandise
+      </p>
+    </div>
+  
+    <b class="section-heading h1-2024">H1 2024</b>
+    <div class="h1-2024-details">
+      <p class="mb-1 fw-bold">Multiplayer Platformer Game</p>
+      <p>
+        • First co-op game <br><br>
+        Release of the Pixel Avatars <br><br>
+        • Use your pixel avatars in game <br>
+        • Get the sprites for metaverse  platforms
+      </p>
     </div>
   </div>
 
-  
-  </body>
+</div>
+</section>
+<script>
+  const gifCount = 10; // Total number of gifs in the assets folder
+  const gifFolder = '../../../assets/nftcollection/'; // Path to the assets folder
+  const gifElements = [
+      document.getElementById('gif1'),
+      document.getElementById('gif2'),
+      document.getElementById('gif3'),
+      document.getElementById('gif4'),
+      document.getElementById('gif5')
+  ];
+
+  const gifPaths = [
+      'image1.webp',
+      'raj.webp',
+      'ray-9gag.webp',
+      'beanie.webp',
+      'Honorary_Dingaling.webp',
+      // Add more gif file names as needed
+  ];
+
+  function getRandomGifIndex() {
+      return Math.floor(Math.random() * gifPaths.length);
+  }
+
+  function setRandomGifs() {
+      const selectedIndices = new Set();
+      while (selectedIndices.size < gifElements.length) {
+          selectedIndices.add(getRandomGifIndex());
+      }
+      selectedIndices.forEach((index, i) => {
+          gifElements[i].src = `${gifFolder}${gifPaths[index]}`;
+          // Check if the gif loads successfully
+          gifElements[i].onerror = () => {
+              console.error(`Failed to load gif: ${gifElements[i].src}`);
+          };
+      });
+  }
+
+  setRandomGifs();
+</script>
+
+</body>

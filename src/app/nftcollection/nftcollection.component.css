@@ -1,31 +1,35 @@
 
 @import "../css/modal.css";
 
-/* ========== Global Styles ================ */
-
-body{
-    background-color: #F4F2EC !important;
-    overflow-x: hidden;
-    margin: 0; 
+*{
+    margin: 0;
     padding: 0;
-    font-family: 'Montserrat' !important;
 }
-/* ================= nav bar ================== */
-
+body{
+    overflow-x: hidden;
+    background-color:#F4F2EC ;
+}
+/* navbar */
 .logo img{
     width: 40px;
     height: auto;
 }
 
 .nav-item a{
+    font-family: 'Montserrat', sans-serif;
     color: black;
-} 
+}
+.navbar-nav{
+    background-color: rgba(221, 221, 221, 0.5);
+    border-radius: 20px;
+}
 
 .nav-item a:hover{
     color: #0a58ca;
 }
 .navbar_button
 {
+    font-family: 'Montserrat', sans-serif;
     background-color: rgba(255, 103, 0, 0.6);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 16px;
@@ -36,10 +40,113 @@ body{
 }
 
 
-/* ====================Hero Section======================== */
-
-.image-gallery {
+/* banner-section */
+.banner-section{
     position: relative;
+    background-image: url('../../assets/nftcollection/Banner.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}  
+.banner-content{
+    width: 420px;
+    height: 180px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    bottom: 100px;
+    left: 70px;
+    position: absolute;
+}
+.banner-content h1{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Days One', sans-serif;
+}
+.banner-content p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; /* Adjust font size if necessary */
+    color: #ffffff;
+    font-weight: 400;
+}
+@media (max-width: 568px) {
+    .banner-content{
+        width: 320px;
+        background: rgba(54, 54, 54, 0.5);
+        border-radius: 40px;
+        bottom: 120px;
+        left: 40px;
+        position: absolute;
+    }
+    .banner-content h1{
+        font-size: 14px;
+    }
+    .banner-content p{
+        font-size: 12px; /* Adjust font size if necessary */
+    }
+}
+@media (max-width: 428px) {
+.banner-content{
+    width: 260px;
+}
+}
+
+
+
+.slider {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F2EC;
+}
+
+.slider-container {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F4F2EC;
+}
+
+.slider img {
+    width: 150px;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+@media (max-width: 912px) {
+    .slider img {
+        width: 150px;
+        margin-right: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 855px) {
+    .slider img {
+        width: 140px;
+        margin-right: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+}
+
+
+/* ====================Hero Section======================== */
+.nft-collection{
+    background-color: #F4F2EC;
+    min-height: 100vh;
+    position: relative;
+}
+.image-gallery {
+    position: fixed;
     height: 500px;
 }
 
@@ -417,6 +524,61 @@ body{
         height: 270px;
     }
 }
+
+
+/* banner-section */
+.banner-section2{
+    position: relative;
+    background-image: url('../../assets/nftcollection/WebsiteTree.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    background-attachment: relative;
+    min-height: 150vh;
+}  
+.banner-content2{
+    width: 420px;
+    height: 180px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    bottom: 100px;
+    left: 70px;
+    position: absolute;
+}
+.banner-content2 h1{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Days One', sans-serif;
+}
+.banner-content2 p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; /* Adjust font size if necessary */
+    color: #ffffff;
+    font-weight: 400;
+}
+@media (max-width: 568px) {
+    .banner-content2{
+        width: 320px;
+        background: rgba(54, 54, 54, 0.5);
+        border-radius: 40px;
+        bottom: 120px;
+        left: 40px;
+        position: absolute;
+    }
+    .banner-content2 h1{
+        font-size: 14px;
+    }
+    .banner-content2 p{
+        font-size: 12px; /* Adjust font size if necessary */
+    }
+}
+@media (max-width: 428px) {
+.banner-content2{
+    width: 260px;
+}
+}
+
 
 
 .bg_img

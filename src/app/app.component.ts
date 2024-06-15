@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 
   authCookiePath = "RUYU_AUTH_CREDENTIALS"
   title = 'ruyu-client';
-  baseUrl = "http://139.59.157.143:8080/api"
+  baseUrl = "https://139.59.157.143:8080/api"
   name = ""
   imageUrl = "";
   authResponse: any;

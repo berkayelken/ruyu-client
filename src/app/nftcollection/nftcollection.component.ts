@@ -4,9 +4,10 @@ import { SlidesOutputData, OwlOptions } from 'ngx-owl-carousel-o';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
+// import { CarouselModule_1 as CarouselModule } from "ngx-owl-carousel-o";
 
 @Component({
-  selector: 'app-nftcollection',
+  selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,

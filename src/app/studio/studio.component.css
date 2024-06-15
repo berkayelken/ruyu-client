@@ -2,6 +2,7 @@
 
 .img-1{
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 .img-2{
     margin-left: 30px;
@@ -38,10 +39,10 @@ h2{
 }
 .logo img{ width: 40px; height: auto; }
 
-.nav-item a{ color: black; }
+.nav-item a{ font-family: 'Montserrat', sans-serif; color: black; }
 
 .nav-item a:hover{ color: #0a58ca; }
- .navbar_button { background-color: rgba(255, 103, 0, 0.6); border: 1px solid rgb(0, 0, 0); border-radius: 16px; padding: 5px; font-weight: 500; color: #ffffff ; text-decoration: none; }
+ .navbar_button { font-family: 'Montserrat', sans-serif;background-color: rgba(255, 103, 0, 0.6); border: 1px solid rgb(0, 0, 0); border-radius: 16px; padding: 5px; font-weight: 500; color: #ffffff ; text-decoration: none; }
  .footer .nav li a:hover {
     color: #f90 !important;
 }
@@ -72,7 +73,7 @@ h2{
     display: none; /* Hidden by default */
 }
 .section-1{
-    min-height: 76vh;
+    min-height: 100vh;
 }
 #scrollToTopBtn:hover {
     background-color: #dd8237;
