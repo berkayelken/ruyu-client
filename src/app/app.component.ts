@@ -5,8 +5,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { filter, map } from 'rxjs/operators';
 
-
-
 // @ts-ignore
 const $: any = window['$']
 
@@ -17,7 +15,6 @@ const $: any = window['$']
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-
 
 export class AppComponent implements OnInit {
   server = "https://www.ruyui.com"
@@ -54,7 +51,7 @@ export class AppComponent implements OnInit {
   tokenBalance = 0;
   quests: Array<Quest> = [];
   code: string | undefined;
-
+  
   constructor(private route: ActivatedRoute,  private titleService: Title,
      private httpClient: HttpClient, private router: Router, @Inject(DOCUMENT) private document: Document) { }
 
@@ -110,9 +107,7 @@ export class AppComponent implements OnInit {
     this.route.queryParams.subscribe((params: { [x: string]: string; }) => {
       this.code = params['code'];
       if (this.code) {
-        this.httpClient.get(this.baseUrl + "/auth/sign/in/twitter/" + this.code, {
-          headers: this.getDefaultHeaders()
-        }).subscribe((res) => {
+        this.httpClient.get(this.baseUrl + "/auth/sign/in/twitter/" + this.code).subscribe((res) => {
           this.authResponse = res;
           this.name = this.authResponse.name;
           this.setCookie();
@@ -157,29 +152,21 @@ export class AppComponent implements OnInit {
 
   private callAddUserName(quest: Quest) {
     let url = this.baseUrl + "/quest/enroll/add/platform" + quest.id
-    let headers = this.getHeaders();
+  
     let body = { questId: quest.id, platform: quest.thirdPartyType, identifierForPlatform: "" }// this will be added
-    this.httpClient.post(url, body, {
-      headers: headers
-    }).subscribe(res => { })
+    this.httpClient.post(url, body).subscribe(res => { })
   }
 
   private callEnrollApi(quest: Quest) {
     let url = this.baseUrl + "/quest/enroll/duty/" + quest.id
-    let headers = this.getHeaders();
-    this.httpClient.post(url, {}, {
-      headers: headers
-    }).subscribe(res => {
+    this.httpClient.post(url, {}).subscribe(res => {
       window.open(quest.redirectUrl, "_blank");
     })
   }
 
   openQuestModal() {
-    let headers = this.getHeaders();
     let url = this.baseUrl + "/quest/user";
-    this.httpClient.get(url, {
-      headers: headers
-    }).subscribe((res) => {
+    this.httpClient.get(url).subscribe((res) => {
       this.questResponse = res;
       let user = this.questResponse.user;
       this.level = user.level;
@@ -198,11 +185,8 @@ export class AppComponent implements OnInit {
   }
 
   openWheelModal() {
-    let headers = this.getHeaders();
     let url = this.baseUrl + "/gamification/selected/wheel";
-    this.httpClient.get(url, {
-      headers: headers
-    }).subscribe((res) => {
+    this.httpClient.get(url).subscribe((res) => {
       this.wheelValues = []
       this.wheelContentResponse = res
       let selectedPrizesParty = this.wheelContentResponse.selectedPrizesParty;
@@ -226,7 +210,7 @@ export class AppComponent implements OnInit {
 
   checkSuper() {
     let url = this.baseUrl + "/auth/check/super/type";
-    this.httpClient.get(url, { headers: this.getHeaders() }).subscribe(res => {
+    this.httpClient.get(url).subscribe(res => {
       if (!res) {
         this.goHome()
       }
@@ -235,20 +219,6 @@ export class AppComponent implements OnInit {
 
   goHome() {
     this.router.navigate(['/home'])
-  }
-
-  getHeaders(): HttpHeaders {
-    let headers = this.getDefaultHeaders()
-    headers = headers.set("auth-token", "Bearer " + this.getToken());
-    headers = headers.set("special", "Bearer " + this.getToken());
-    return headers
-  }
-
-  private getDefaultHeaders() {
-    let headers = new HttpHeaders();
-    headers = headers.set("Content-Type", "application/json");
-    headers = headers.set("Accept", "application/json");
-    return headers;
   }
 
   goBackToFirstModal() {
@@ -276,10 +246,7 @@ export class AppComponent implements OnInit {
 
   private callTurnWheel() {
     let url = this.baseUrl + "/gamification/selected/wheel/turn";
-    let headers = this.getHeaders();
-    this.httpClient.post(url, {}, {
-      headers: headers
-    }).subscribe(res => {
+    this.httpClient.post(url, {}).subscribe(res => {
       this.wheelContentResponse = res
       this.currentPrize = this.wheelContentResponse.currentPrize ? this.wheelContentResponse.currentPrize : 0
       this.tokenBalance += this.currentPrize;

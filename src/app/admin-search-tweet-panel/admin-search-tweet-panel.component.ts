@@ -44,7 +44,7 @@ export class AdminSearchTweetPanelComponent implements OnInit {
   search() {
     let url = this.appComponent.baseUrl + "/tweet/search";
     this.name = this.appComponent.name
-    this.httpClient.post(url , this.createBody(), {headers: this.appComponent.getHeaders()}).subscribe(res => {
+    this.httpClient.post(url , this.createBody()).subscribe(res => {
       this.response = res;
       this.dataSource = this.response.tweetList;
       this.nextPage = this.response.nextToken
@@ -60,7 +60,7 @@ export class AdminSearchTweetPanelComponent implements OnInit {
 
   approveTweetQuestWithQuestId(username: string, quest: string) {
     let url = this.appComponent.baseUrl + "/quest/enroll/approve/" + username + "/" + quest
-    this.httpClient.post(url , {}, {headers: this.appComponent.getHeaders()}).subscribe(res => {})
+    this.httpClient.post(url , {}).subscribe(res => {})
   }
 
   private createBody() {

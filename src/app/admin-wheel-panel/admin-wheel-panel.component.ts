@@ -34,13 +34,13 @@ export class AdminWheelPanelComponent  implements OnInit {
 
   deleteWheel(wheel: any) {
     let url = this.appComponent.baseUrl + "/gamification/wheel/" + wheel.id;
-    this.httpClient.delete(url, {headers: this.appComponent.getHeaders()}).subscribe(res => this.getWheels())
+    this.httpClient.delete(url).subscribe(res => this.getWheels())
   }
 
   private getWheels() {
     let url = this.appComponent.baseUrl + "/gamification/wheel/all";
     this.name = this.appComponent.name
-    this.httpClient.get(url , {headers: this.appComponent.getHeaders()}).subscribe(res => {
+    this.httpClient.get(url).subscribe(res => {
       this.response = res;
       this.dataSource = this.response;
       this.resultsLength = this.response.length

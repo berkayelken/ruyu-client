@@ -54,7 +54,7 @@ export class AdminWheelComponent implements OnInit {
   private getWheel(id: string) {
     let url = this.appComponent.baseUrl + "/gamification/wheel/single/" + id;
     this.name = this.appComponent.name
-    this.httpClient.get(url , {headers: this.appComponent.getHeaders()}).subscribe(res => {
+    this.httpClient.get(url).subscribe(res => {
       this.response = res;
       this.wheelName = this.response.name;
       this.recurringTimeAsHours = this.response.recurringTimeAsHours;
@@ -79,12 +79,12 @@ export class AdminWheelComponent implements OnInit {
 
   private updateWheel() {
     let url = this.appComponent.baseUrl + "/gamification/wheel/update/" + this.id;
-    this.httpClient.put(url, this.createBody(), {headers: this.appComponent.getHeaders()}).subscribe(res => this.router.navigate(['/admin/wheels']))
+    this.httpClient.put(url, this.createBody()).subscribe(res => this.router.navigate(['/admin/wheels']))
   }
 
   private createWheel() {
     let url = this.appComponent.baseUrl + "/gamification/wheel/create";
-    this.httpClient.post(url, this.createBody(), {headers: this.appComponent.getHeaders()}).subscribe(res => this.router.navigate(['/admin/wheels']))
+    this.httpClient.post(url, this.createBody()).subscribe(res => this.router.navigate(['/admin/wheels']))
   }
 
 

@@ -62,7 +62,7 @@ export class AdminQuestComponent implements OnInit {
   private getQuest(id: string) {
     let url = this.appComponent.baseUrl + "/quest/single/" + id;
     this.name = this.appComponent.name
-    this.httpClient.get(url , {headers: this.appComponent.getHeaders()}).subscribe(res => {
+    this.httpClient.get(url ).subscribe(res => {
       this.response = res;
       this.questName = this.response.name;
       this.description = this.response.description;
@@ -96,12 +96,12 @@ export class AdminQuestComponent implements OnInit {
 
   private updateQuest() {
     let url = this.appComponent.baseUrl + "/quest/update";
-    this.httpClient.put(url, this.createBody(), {headers: this.appComponent.getHeaders()}).subscribe(res => this.router.navigate(['/admin/quests']))
+    this.httpClient.put(url, this.createBody()).subscribe(res => this.router.navigate(['/admin/quests']))
   }
 
   private createQuest() {
     let url = this.appComponent.baseUrl + "/quest/add";
-    this.httpClient.post(url, this.createBody(), {headers: this.appComponent.getHeaders()}).subscribe(res => this.router.navigate(['/admin/quests']))
+    this.httpClient.post(url, this.createBody()).subscribe(res => this.router.navigate(['/admin/quests']))
   }
 
 

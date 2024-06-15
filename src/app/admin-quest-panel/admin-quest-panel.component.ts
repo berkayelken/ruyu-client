@@ -35,13 +35,13 @@ export class AdminQuestPanelComponent implements OnInit {
 
   deleteQuest(quest: any) {
     let url = this.appComponent.baseUrl + "/quest/" + quest.id;
-    this.httpClient.delete(url, {headers: this.appComponent.getHeaders()}).subscribe(res => this.getQuests())
+    this.httpClient.delete(url).subscribe(res => this.getQuests())
   }
 
   private getQuests() {
     let url = this.appComponent.baseUrl + "/quest/all";
     this.name = this.appComponent.name
-    this.httpClient.get(url , {headers: this.appComponent.getHeaders()}).subscribe(res => {
+    this.httpClient.get(url).subscribe(res => {
       this.response = res;
       this.dataSource = this.response;
       this.resultsLength = this.dataSource.length
