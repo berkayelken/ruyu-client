@@ -221,6 +221,13 @@ body{
     background-attachment: fixed;
     min-height: 100vh;
 }
+
+@media (max-width: 480px) {
+    .banner-section2{
+        background-image: url('../../assets/THELORE/meetbob-mobile.gif') !important;
+        background-size: 100% 100% !important;
+    }  
+}
 .banner-section3{
     position: relative;
     background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');

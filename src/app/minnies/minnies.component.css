@@ -52,12 +52,14 @@ body{
 @media (max-width: 480px) {
     .banner-section{
         background-image: url('../../assets/minnies/MinniesPortrait.webp') !important;
+        background-size: 100% 100% !important;
     }  
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
     .banner-section{
         background-image: url('../../assets/minnies/MinniesTablet.webp') !important;
+        background-size: 100% 100% !important;
     }  
 }
 .banner-content{
