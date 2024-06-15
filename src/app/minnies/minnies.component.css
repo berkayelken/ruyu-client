@@ -48,6 +48,18 @@ body{
     background-attachment: fixed;
     min-height: 100vh;
 }  
+
+@media (max-width: 480px) {
+    .banner-section{
+        background-image: url('../../assets/minnies/MinniesPortrait.webp') !important;
+    }  
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .banner-section{
+        background-image: url('../../assets/minnies/MinniesTablet.webp') !important;
+    }  
+}
 .banner-content{
     width: 420px;
     height: 180px;
