@@ -614,12 +614,12 @@ body {
 
 @media (max-width: 480px) {
   .banner-section {
-    background-image: url('../../assets/minnies/Minnies_Banner1_Mobile_portrait.webp') !important;
+    background-image: url('../../assets/minnies/Minnies_Banner1_new_Portrait.webp') !important;
     background-size: 100% 100% !important;
   }
 
   .banner-section2 {
-    background-image: url('../../assets/minnies/Minnies_Banner2_Mobile_Portrait.webp') !important;
+    background-image: url('../../assets/minnies/Minnies_Banner2_new_Portrait.webp') !important;
     background-size: 100% 100% !important;
   }
 }

@@ -92,7 +92,6 @@ button:focus:not(:focus-visible) {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -252,13 +251,18 @@ button:focus:not(:focus-visible) {
 
 @media (max-width: 480px) {
   .banner-section2 {
-    background-image: url('../../assets/THELORE/meetbob-mobile.gif') !important;
+    background-image: url('../../assets/THELORE/thelore_animation_mobile.gif') !important;
+    background-size: 100% 100% !important;
+  }
+
+  .banner-section {
+    background-image: url('../../assets/THELORE/TheLore_Banner1_Portrait.webp') !important;
     background-size: 100% 100% !important;
   }
 }
 
 @supports (-webkit-touch-callout : none) {
-  .banner-section3 {
+  .banner-section {
     background-attachment: scroll;
   }
 
@@ -268,7 +272,7 @@ button:focus:not(:focus-visible) {
 }
 
 @supports not (-webkit-touch-callout : none) {
-  .banner-section3 {
+  .banner-section {
     background-attachment: fixed;
   }
 
@@ -283,6 +287,7 @@ button:focus:not(:focus-visible) {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh
 }
 
