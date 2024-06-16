@@ -49,8 +49,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center, center;
-  background-attachment: fixed;
   min-height: 100vh;
+}
+
+@supports (-webkit-touch-callout : none) {
+  .banner-section {
+    background-attachment: scroll;
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .banner-section {
+    background-attachment: fixed;
+  }
 }
 
 .banner-content {
@@ -2636,18 +2647,18 @@ a {
 }
 
 @media (max-width: 768px) {
-    /* .main-container {
+  /* .main-container {
       flex-direction: column-reverse;
     } */
 
-    .slider-section{
-        margin-top: 0 !important;
-    }
+  .slider-section {
+    margin-top: 0 !important;
   }
+}
 
 
-  @media (min-width: 992px) {
-    .pt-lg-5 {
-        padding-top: 0rem !important;
-    }
+@media (min-width: 992px) {
+  .pt-lg-5 {
+    padding-top: 0rem !important;
+  }
 }
