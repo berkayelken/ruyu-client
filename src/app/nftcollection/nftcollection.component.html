@@ -73,24 +73,15 @@
 </div>
 
 </section>-->
-<section class="mt-5 position-relative" style="overflow:hidden; font-family: Days One;">
+<section class="mt-5 position-relative slider-section" style="overflow:hidden; font-family: Days One;">
   <div class="container pt-lg-5">
-      <div class="row custom_height">
-          <div class="col-lg-6">
+      <div class="main-container row custom_height">
+          <div class="text-container col-lg-6">
               <div class="d-none d-lg-block">
                   <p class="text-lg-start text-center d-none d-lg-block" style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
                   <p class="text-lg-start text-center d-none d-lg-block">
                       9,999 unique characters created with over 400 traits, waiting for you to find the gates and join Bob’s journey.
                   </p>
-              </div>
-              <div class="image-gallery position-relative mt-0 mt-lg-5">
-                  <img src="../../../assets/nftcollection/Honorary_Base.webp" alt="Description 1" class="image-custom image1">
-                  <img src="../../../assets/nftcollection/toly.webp" alt="Description 2" class="image-custom image2">
-                  <img src="../../../assets/nftcollection/pranksy.webp" alt="Description 3" class="image-custom image3">
-                  <img src="../../../assets/nftcollection/jonahblake.webp" alt="Description 1" class="image-custom image4">
-                  <img src="../../../assets/nftcollection/Honorary_Bearsnake.webp" alt="Description 2" class="image-custom image5">
-                  <img src="../../../assets/nftcollection/charl3s.webp" alt="Description 3" class="image-custom image6">
-                  <img src="../../../assets/nftcollection/Honorary_Deekay.webp" alt="Description 1" class="image-custom image7">
               </div>
               <div class="d-block d-lg-none mt-0 mt-md-4 mt-lg-0">
                   <p class="text-lg-start text-center" style="font-weight: bolder; font-size: 24px;">RUYUI NFT Collection</p>
@@ -99,13 +90,13 @@
                   </p>
               </div>
           </div>
-          <div class="col-lg-6 d-lg-block d-none">
-            <div class="gif-container">
-                <img id="gif1" alt="Scene-1" class="multi-gif img-fluid">
-                <img id="gif2" alt="Scene-2" class="multi-gif img-fluid">
-                <img id="gif3" alt="Scene-3" class="multi-gif img-fluid">
-                <img id="gif4" alt="Scene-4" class="multi-gif img-fluid">
-                <img id="gif5" alt="Scene-5" class="multi-gif img-fluid">
+          <div class="col-lg-6">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slider-item" *ngFor="let image of currentImages">
+                  <img [src]="image.src" [alt]="'Image ' + image.id">
+                </div>
+              </div>
             </div>
         </div>
       </div>

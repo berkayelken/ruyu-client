@@ -20,49 +20,58 @@ import { CommonModule } from '@angular/common';
 })
   
 export class NftcollectionComponent {
-  sildePicTemplate = "../../../assets/minnies/image";
-  customOptions: OwlOptions = {
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    slideTransition: 'linear',
-    autoplayTimeout: 1000,
-    autoplaySpeed: 1500,
-    responsive: {
-        0: {
-            items: 2,
-            loop:true
-        },
-        600: {
-            items: 4,
-            loop:true
-        },
-        1000: {
-            items: 10,
-            loop:true
-        }
-    }
-}
-activeSlides: SlidesOutputData = {};
+  cardString = "../../../assets/nftcollection/card";
 slidesStore: any[] = [];
+currentImages: any[] = [];
+
 
   constructor() { }
 
   ngOnInit(): void {
-    for(let i = 0; i < 22; i++) {
-      let image = this.sildePicTemplate + i + ".webp";
+    for(let i = 1; i < 9; i++) {
+      let image = this.cardString + i + ".webp";
       this.slidesStore.push({id: i, src: image})
     }
+
+    this.loadRandomImages();
+    setInterval(() => {
+      this.loadRandomImages();
+    }, 9000);
   }
 
-  getPassedData(data: SlidesOutputData) {
-    this.activeSlides = data;
+  loadRandomImages(): void {
+    let newImages: any[];
+    do {
+      newImages = this.getRandomImages(3);
+    } while (this.arraysIntersect(newImages, this.currentImages));
+
+    this.currentImages = newImages;
   }
 
+  getRandomImages(count: number): any[] {
+    const randomIndices = this.getRandomIndices(count, this.slidesStore.length);
+    return randomIndices.map(index => this.slidesStore[index]);
+  }
+
+  getRandomIndices(count: number, max: number): number[] {
+    const indices:any[] = [];
+    while (indices.length < count) {
+      const randomIndex = Math.floor(Math.random() * max);
+      if (!indices.includes(randomIndex)) {
+        indices.push(randomIndex);
+      }
+    }
+    return indices;
+  }
+
+  arraysIntersect(arr1: any[], arr2: any[]): boolean {
+    return arr1.some(item1 => arr2.some(item2 => item1.id === item2.id));
+  }
 }
 
 
+
+
+ 
 
 
