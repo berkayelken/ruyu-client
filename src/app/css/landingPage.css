@@ -111,7 +111,8 @@ body{
     max-width: 500px;
     position: relative;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    animation: fadeIn 0.3s;
+    -webkit-animation: fadeIn 0.3s;
+            animation: fadeIn 0.3s;
 }
 
 .popup-content .close {
@@ -172,6 +173,10 @@ body{
 .how-to-row{
     margin-top: 0rem;
      text-align: center;   
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 @keyframes fadeIn {
     from {opacity: 0;}

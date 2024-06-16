@@ -731,7 +731,9 @@ body{
     top: 37.8rem;
     left: 21rem; 
     font-size: 0.8rem;
-    writing-mode: vertical-rl; 
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl; 
     transform: rotate(180deg); 
     transform-origin: bottom; 
     white-space: nowrap;
@@ -1364,7 +1366,8 @@ footer .nav li a:hover {
     max-width: 500px;
     position: relative;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    animation: fadeIn 0.3s;
+    -webkit-animation: fadeIn 0.3s;
+            animation: fadeIn 0.3s;
 }
 
 .popup-content .close {
@@ -1425,6 +1428,10 @@ footer .nav li a:hover {
 .how-to-row{
     margin-top: 0rem;
      text-align: center;   
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 @keyframes fadeIn {
     from {opacity: 0;}
