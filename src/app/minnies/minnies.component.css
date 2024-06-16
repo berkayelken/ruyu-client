@@ -650,6 +650,15 @@ body {
   }
 }
 
+@supports ( -webkit-touch-callout : none) {
+  .banner-section {
+  background-attachment:scroll !important;
+  }
+  .banner-section2 {
+    background-attachment:scroll !important;
+    }
+  }
+
 /* scroll to top */
 #scrollToTopBtn {
   position: fixed;

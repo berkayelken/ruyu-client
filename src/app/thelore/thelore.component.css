@@ -1,577 +1,714 @@
-
 @import "../css/modal.css";
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    overflow-x: hidden;
+
+body {
+  overflow-x: hidden;
 }
+
 /* navbar */
-.logo img{
-    width: 40px;
-    height: auto;
+.logo img {
+  width: 40px;
+  height: auto;
 }
 
-.nav-item a{
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-}
-.navbar-nav{
-    background-color: rgba(221, 221, 221, 0.5);
-    border-radius: 20px;
+.nav-item a {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 
-.nav-item a:hover{
-    color: #0a58ca;
+.navbar-nav {
+  background-color: rgba(221, 221, 221, 0.5);
+  border-radius: 20px;
 }
+
+.nav-item a:hover {
+  color: #0a58ca;
+}
+
 .custom-toggler .navbar-toggler-icon {
-    display: inline-block;
-    width: 30px;
-    height: 24px;
-    position: relative;
-  }
-  button:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow: none;
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+  position: relative;
 }
-  .custom-toggler .navbar-toggler-icon::before,
-  .custom-toggler .navbar-toggler-icon::after,
-  .custom-toggler .navbar-toggler-icon span {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s;
-  }
-  
-  .custom-toggler .navbar-toggler-icon::before {
-    top: 0;
-  }
-  
-  .custom-toggler .navbar-toggler-icon::after {
-    bottom: 0;
-  }
-  
-  .custom-toggler .navbar-toggler-icon span {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-.navbar_button
-{
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgba(255, 103, 0, 0.6);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 16px;
-    padding: 5px;
-    font-weight: 500;
-    color: #ffffff ;
-    text-decoration: none;
+
+button:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
+
+.custom-toggler .navbar-toggler-icon::before,
+.custom-toggler .navbar-toggler-icon::after,
+.custom-toggler .navbar-toggler-icon span {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.custom-toggler .navbar-toggler-icon::before {
+  top: 0;
+}
+
+.custom-toggler .navbar-toggler-icon::after {
+  bottom: 0;
+}
+
+.custom-toggler .navbar-toggler-icon span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar_button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255, 103, 0, 0.6);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  padding: 5px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
-    .navbar-nav{
-        margin-top: 12px !important; 
-    }
+  .navbar-nav {
+    margin-top: 12px !important;
+  }
 }
 
 
 /* banner-section */
-.banner-section{
-    position: relative;
-    background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-}  
-.banner-content{
-    width: 580px;
-    height: 260px;
+.banner-section {
+  position: relative;
+  background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.banner-content {
+  width: 580px;
+  height: 260px;
+  background: rgba(54, 54, 54, 0.5);
+  border-radius: 40px;
+  bottom: 100px;
+  left: 70px;
+  position: absolute;
+}
+
+.banner-content h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Days One', sans-serif;
+}
+
+.banner-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  /* Adjust font size if necessary */
+  color: #ffffff;
+  font-weight: 400;
+}
+
+@media (max-width: 568px) {
+  .fixed-buttons img {
+    width: 35px !important;
+  }
+
+  #scrollToTopBtn {
+    padding: 10px 17px;
+  }
+
+  .banner-content {
+    width: 320px;
+    height: 265px;
     background: rgba(54, 54, 54, 0.5);
     border-radius: 40px;
-    bottom: 100px;
-    left: 70px;
+    bottom: 120px;
+    left: 40px;
     position: absolute;
+  }
+
+  .banner-content h1 {
+    font-size: 14px;
+  }
+
+  .banner-content p {
+    font-size: 12px;
+    /* Adjust font size if necessary */
+  }
 }
-.banner-content h1{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'Days One', sans-serif;
-}
-.banner-content p{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px; /* Adjust font size if necessary */
-    color: #ffffff;
-    font-weight: 400;
-}
-@media (max-width: 568px) {
-    .fixed-buttons img{
-        width: 35px !important;
-    }
-    #scrollToTopBtn{
-        padding: 10px 17px;
-    }
-    .banner-content{
-        width: 320px;
-        height: 265px;
-        background: rgba(54, 54, 54, 0.5);
-        border-radius: 40px;
-        bottom: 120px;
-        left: 40px;
-        position: absolute;
-    }
-    .banner-content h1{
-        font-size: 14px;
-    }
-    .banner-content p{
-        font-size: 12px; /* Adjust font size if necessary */
-    }
-}
+
 @media (max-width: 431px) {
-.banner-content{
+  .banner-content {
     width: 260px;
     height: 315px;
-}
-.banner-section {
+  }
+
+  .banner-section {
     min-height: 92vh !important;
-}
+  }
 }
 
 @media (max-width: 376px) {
-    .banner-section {
-        min-height: 100vh !important;
-    }
-    }
-/* nft-collection */
-.nft-collection{
-    background-color: #F4F2EC;
-    min-height: 80vh;
-    position: relative;
+  .banner-section {
+    min-height: 100vh !important;
+  }
 }
+
+/* nft-collection */
+.nft-collection {
+  background-color: #F4F2EC;
+  min-height: 80vh;
+  position: relative;
+}
+
 @media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
-    .nft-collection{
-        min-height: 72vh !important;
-    }}
-    
+  .nft-collection {
+    min-height: 72vh !important;
+  }
+}
+
 
 @media (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
-    .nft-collection{
-        min-height: 42vh !important;
-    }
+  .nft-collection {
+    min-height: 42vh !important;
+  }
 }
+
 @media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
-    .nft-collection{
-        min-height: 85vh !important;
-    }
+  .nft-collection {
+    min-height: 85vh !important;
+  }
 }
 
 @media (min-width: 912px) and (max-width: 912px) and (min-height: 1368) and (max-height: 1368px) {
-    .nft-collection{
-        min-height: 80vh !important;
-    }
-}
-@media (min-width: 853px) and (max-width: 853px) and (min-height: 1280px) and (max-height: 1280px) {
-    .nft-collection{
-        min-height: 82vh !important;
-    }
-}
-.nft-collection .text-content h1{
-    font-family: 'Days One', sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-    color: #000;
-}
-.nft-collection .text-content p{
-    margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: #000;
-}
-@media (max-width: 668px) {
-    .nft-collection .text-content p{
-        font-size: 14px;
-    } 
-}
-@media (max-width: 401px) {
-    .nft-collection .text-content p{
-        font-size: 12px;
-    } 
+  .nft-collection {
+    min-height: 80vh !important;
+  }
 }
 
-.nft-collection img{
-    border-radius: 15px;
+@media (min-width: 853px) and (max-width: 853px) and (min-height: 1280px) and (max-height: 1280px) {
+  .nft-collection {
+    min-height: 82vh !important;
+  }
 }
-.gif-container img{
-    width: 100% !important;
+
+.nft-collection .text-content h1 {
+  font-family: 'Days One', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #000;
+}
+
+.nft-collection .text-content p {
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+@media (max-width: 668px) {
+  .nft-collection .text-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 401px) {
+  .nft-collection .text-content p {
+    font-size: 12px;
+  }
+}
+
+.nft-collection img {
+  border-radius: 15px;
+}
+
+.gif-container img {
+  width: 100% !important;
 }
 
 /* banner-section2 */
-.banner-section2{
-    position: relative;
-    background-image: url('../../assets/THELORE/meetbob.gif');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
+.banner-section2 {
+  position: relative;
+  background-image: url('../../assets/THELORE/meetbob.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 @media (max-width: 480px) {
-    .banner-section2{
-        background-image: url('../../assets/THELORE/meetbob-mobile.gif') !important;
-        background-size: 100% 100% !important;
-    }  
+  .banner-section2 {
+    background-image: url('../../assets/THELORE/meetbob-mobile.gif') !important;
+    background-size: 100% 100% !important;
+  }
 }
-.banner-section3{
-    position: relative;
-    background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh
+
+@supports (-webkit-touch-callout : none) {
+  .banner-section3 {
+    background-attachment: scroll !important;
+  }
+
+  .banner-section2 {
+    background-attachment: scroll !important;
+  }
 }
+
+.banner-section3 {
+  position: relative;
+  background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh
+}
+
+
 
 /* scroll to top */
 #scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #E16700;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 100;
-    font-weight: bold;
-    display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E16700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  font-weight: bold;
+  display: none;
+  /* Hidden by default */
 }
 
 #scrollToTopBtn:hover {
-    background-color: #dd8237;
+  background-color: #dd8237;
 }
 
 /* poup styling  */
 #openPopup {
-    padding: 10px 2px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 10px 2px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .popup {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    right: 0; /* Position to the right side */
-    top: 8px; /* Position to the top */
-    width: 440px; /* Adjust width as needed */
-    height: auto; /* Adjust height as needed or set a specific height */
-    padding: 20px; /* Add some padding */
-    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  display: none;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  /* Position to the right side */
+  top: 8px;
+  /* Position to the top */
+  width: 440px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Adjust height as needed or set a specific height */
+  padding: 20px;
+  /* Add some padding */
+  border-radius: 8px;
+  /* Optional: Add border radius for rounded corners */
 }
+
 @media (max-width: 913px) {
-    .popup {
-        top: 722px !important; /* Adjust the top position if needed */
-    }
-    .banner-section {
-        min-height: 95vh;
-    }
+  .popup {
+    top: 722px !important;
+    /* Adjust the top position if needed */
+  }
+
+  .banner-section {
+    min-height: 95vh;
+  }
 }
+
 @media (max-width: 821px) {
-    .popup {
-        top: 540px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 540px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 769px) {
-    .popup {
-        top: 390px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 390px !important;
+    /* Adjust the top position if needed */
+  }
 }
 
 .popup-content {
-    background-color: #fff;
-    margin: 4% auto;
-    padding: 20px;
-    border: 1.5px solid black;
-    border-radius: 2rem;
-    width: 98%;
-    max-width: 500px;
-    position: relative;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    -webkit-animation: fadeIn 0.3s;
-            animation: fadeIn 0.3s;
+  background-color: #fff;
+  margin: 4% auto;
+  padding: 20px;
+  border: 1.5px solid black;
+  border-radius: 2rem;
+  width: 98%;
+  max-width: 500px;
+  position: relative;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
 }
 
 .popup-content .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #aaa;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .popup-content .close:hover,
 .popup-content .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
-.custom-px-2{
-    padding-left: 1rem;
-     padding-right: 1rem;
+
+.custom-px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.custom-padding{
-    padding: 1rem;
+
+.custom-padding {
+  padding: 1rem;
 }
+
 @media (max-width: 555px) {
-    .custom-px-2{
-        padding-left: 0rem;
-        padding-right: 2rem;
-    }
-    .custom-padding{
-        padding: 0rem !important;
-    }
-   .popup-content{
+  .custom-px-2 {
+    padding-left: 0rem;
+    padding-right: 2rem;
+  }
+
+  .custom-padding {
+    padding: 0rem !important;
+  }
+
+  .popup-content {
     width: 95% !important;
-   }
-   .popup {
-      z-index: 999 !important;
-      top: 0px !important;
-      background-color: transparent !important;
+  }
+
+  .popup {
+    z-index: 999 !important;
+    top: 0px !important;
+    background-color: transparent !important;
+  }
 }
+
+.custom-modal-flex {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  font-weight: bold;
 }
-.custom-modal-flex{
-    display: flex; 
-    align-items: top; 
-    justify-content: space-between; 
-    font-weight: bold;
+
+.modal-span-text-color {
+  color: #E16700;
 }
-.modal-span-text-color{
-    color: #E16700;
+
+.how-to-row {
+  margin-top: 0rem;
+  text-align: center;
 }
-.how-to-row{
-    margin-top: 0rem;
-     text-align: center;   
-}
+
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
 /* Fixed Buttons Positioned at Bottom Right */
 .fixed-buttons {
-    position: fixed;
-    bottom: 70px;
-    right: 22px;
-    text-align: right;
-    z-index: 1000;
+  position: fixed;
+  bottom: 70px;
+  right: 22px;
+  text-align: right;
+  z-index: 1000;
 }
 
 .fixed-buttons a {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .nft-container span {
-    font-family: 'Days One', sans-serif; /* Apply Days One font to the text */
+  font-family: 'Days One', sans-serif;
+  /* Apply Days One font to the text */
 }
 
 .nft-container {
-    display: flex;
-    align-items: center;  /* Keeps the image and text aligned in the center vertically */
-    gap: 10px;  /* Adds space between the image and the text */
+  display: flex;
+  align-items: center;
+  /* Keeps the image and text aligned in the center vertically */
+  gap: 10px;
+  /* Adds space between the image and the text */
 }
-a{
-    text-decoration: none !important;
+
+a {
+  text-decoration: none !important;
 }
+
 .nft-text {
-    display: flex;
-    color: black;
-    flex-direction: column;
-    align-items: flex-start;  /* Aligns text to the left */
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Aligns text to the left */
 }
 
 .nft-text span {
-    display: block;  /* Ensures each span takes up its own line */
+  display: block;
+  /* Ensures each span takes up its own line */
 }
 
 /* Styles for the container around the NFT link and GIF */
 .fixed-buttons .nft-container {
-    background-color: rgba(221, 221, 221, 0.5); /* White background with opacity */
-    border: 0px solid rgb(48, 48, 48); /* Black border for the container */
-    border-radius: 15px; /* Rounded edges for the container */
-    padding: 8px; /* Padding inside the container */
-    display: flex; /* Use flexbox to align the image and text side by side */
-    align-items: flex; /* Aligns items vertically in the center */
-    justify-content: center; /* Centers items horizontally */
-    gap: 10px; /* Adds space between the GIF */
+  background-color: rgba(221, 221, 221, 0.5);
+  /* White background with opacity */
+  border: 0px solid rgb(48, 48, 48);
+  /* Black border for the container */
+  border-radius: 15px;
+  /* Rounded edges for the container */
+  padding: 8px;
+  /* Padding inside the container */
+  display: flex;
+  /* Use flexbox to align the image and text side by side */
+  align-items: flex;
+  /* Aligns items vertically in the center */
+  justify-content: center;
+  /* Centers items horizontally */
+  gap: 10px;
+  /* Adds space between the GIF */
 }
 
 .fixed-buttons img {
-    width: 55px; /* Resize the GIF as needed */
-    height: auto; /* Maintains the aspect ratio of the GIF */
-    border: 0px solid rgb(48, 48, 48); /* Adds border around the GIF */
-    border-radius: 5px; /* Rounded edges for the GIF */
+  width: 55px;
+  /* Resize the GIF as needed */
+  height: auto;
+  /* Maintains the aspect ratio of the GIF */
+  border: 0px solid rgb(48, 48, 48);
+  /* Adds border around the GIF */
+  border-radius: 5px;
+  /* Rounded edges for the GIF */
 }
 
 /* Specific styles targeting the book icon inside the fixed buttons */
 .fixed-buttons a[href="/book"] img {
-    border: none; /* Removes any border */
-    background: none; /* Removes any background */
+  border: none;
+  /* Removes any border */
+  background: none;
+  /* Removes any background */
 }
 
 /* Alternatively, if you want to ensure no other styles affect it indirectly */
 .fixed-buttons a[href="/book"] img {
-    border: none !important;
-    background: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 .logo img {
-    width: 40px;
-    height: auto;
+  width: 40px;
+  height: auto;
 }
+
 @media (min-width: 1380px) {
-    .popup {
-        top: 150px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 150px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
-    .popup {
-        top: 157px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 157px !important;
+    /* Adjust the top position if needed */
+  }
 }
 
 @media (max-width: 1024px) {
-    .popup {
-        top: 722px !important; /* Adjust the top position if needed */
-    }
-    .banner-section {
-        min-height: 95vh;
-    }
+  .popup {
+    top: 722px !important;
+    /* Adjust the top position if needed */
+  }
+
+  .banner-section {
+    min-height: 95vh;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
-    .popup {
-        top: -33px !important;
-    }
+  .popup {
+    top: -33px !important;
+  }
 }
+
 @media (max-width: 913px) {
-    .popup {
-        top: 722px !important; /* Adjust the top position if needed */
-    }
-    .banner-section {
-        min-height: 95vh;
-    }
+  .popup {
+    top: 722px !important;
+    /* Adjust the top position if needed */
+  }
+
+  .banner-section {
+    min-height: 95vh;
+  }
 }
+
 @media (max-width: 861px) {
-    .popup {
-        top: 640px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 640px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 821px) {
-    .popup {
-        top: 540px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 540px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 769px) {
-    .popup {
-        top: 390px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 390px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 542px) {
-    .popup {
-        top: 112px !important;
-        left: 131px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
+  .popup {
+    top: 112px !important;
+    left: 131px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
 }
 
 @media (max-width: 431px) {
-    .nft-collection {
-        min-height: 84vh !important;
-    }
-    .popup {
-        display: none;
-        position: fixed;
-        z-index: 999;
-        left: -10px !important; /* Position to the right side */
-        top: 328px !important; /* Position to the top */
-        width: 440px; /* Adjust width as needed */
-        height: auto; /* Adjust height as needed or set a specific height */
-        padding: 20px; /* Add some padding */
-        border-radius: 8px; /* Optional: Add border radius for rounded corners */
-    }
-}
-@media (max-width: 401px) {
-    .popup {
-        left: -26px !important; /* Position to the right side */
-        top: 255px !important; /* Position to the top */
-        width: 440px; /* Adjust width as needed */
-    }
-  
-}
-@media (max-width: 415px) {
-    .popup {
-        left: -9px !important;
-        top: 287px !important;
-    }
-  
-}
-@media (max-width: 391px) {
-    .popup {
-        left: -24px !important;
-        top: 253px !important;
-    }
-  
-}
-@media (max-width: 381px) {
-    .popup {
-        top: 55px !important; /* Position to the top */
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-}
-@media (max-width: 361px) {
-    .popup {
-        top: 125px !important; /* Position to the top */
-        left: -42px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-}
-@media (max-width: 351px) {
-    .popup {
-        top: 275px !important; /* Position to the top */
-        left: -30px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-    .popup {
-   
-        width: 417px; /* Adjust width as needed */
+  .nft-collection {
+    min-height: 84vh !important;
+  }
 
-    }
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: -10px !important;
+    /* Position to the right side */
+    top: 328px !important;
+    /* Position to the top */
+    width: 440px;
+    /* Adjust width as needed */
+    height: auto;
+    /* Adjust height as needed or set a specific height */
+    padding: 20px;
+    /* Add some padding */
+    border-radius: 8px;
+    /* Optional: Add border radius for rounded corners */
+  }
+}
+
+@media (max-width: 401px) {
+  .popup {
+    left: -26px !important;
+    /* Position to the right side */
+    top: 255px !important;
+    /* Position to the top */
+    width: 440px;
+    /* Adjust width as needed */
+  }
+
+}
+
+@media (max-width: 415px) {
+  .popup {
+    left: -9px !important;
+    top: 287px !important;
+  }
+
+}
+
+@media (max-width: 391px) {
+  .popup {
+    left: -24px !important;
+    top: 253px !important;
+  }
+
+}
+
+@media (max-width: 381px) {
+  .popup {
+    top: 55px !important;
+    /* Position to the top */
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+}
+
+@media (max-width: 361px) {
+  .popup {
+    top: 125px !important;
+    /* Position to the top */
+    left: -42px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+}
+
+@media (max-width: 351px) {
+  .popup {
+    top: 275px !important;
+    /* Position to the top */
+    left: -30px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+
+  .popup {
+
+    width: 417px;
+    /* Adjust width as needed */
+
+  }
 }
 
 
@@ -579,319 +716,406 @@ a{
 
 /* scroll to top */
 #scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #E16700;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 100;
-    font-weight: bold;
-    display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E16700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  font-weight: bold;
+  display: none;
+  /* Hidden by default */
 }
 
 #scrollToTopBtn:hover {
-    background-color: #dd8237;
+  background-color: #dd8237;
 }
 
 /* poup styling  */
 #openPopup {
-    padding: 10px 2px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 10px 2px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .popup {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    right: 0; /* Position to the right side */
-    top: 8px; /* Position to the top */
-    width: 440px; /* Adjust width as needed */
-    height: auto; /* Adjust height as needed or set a specific height */
-    padding: 20px; /* Add some padding */
-    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  display: none;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  /* Position to the right side */
+  top: 8px;
+  /* Position to the top */
+  width: 440px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Adjust height as needed or set a specific height */
+  padding: 20px;
+  /* Add some padding */
+  border-radius: 8px;
+  /* Optional: Add border radius for rounded corners */
 }
 
 
 @media (max-width: 913px) {
-    .popup {
-        top: 722px !important; /* Adjust the top position if needed */
-    }
-    .banner-section {
-        min-height: 95vh;
-    }
+  .popup {
+    top: 722px !important;
+    /* Adjust the top position if needed */
+  }
+
+  .banner-section {
+    min-height: 95vh;
+  }
 }
+
 @media (max-width: 821px) {
-    .popup {
-        top: 540px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 540px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 769px) {
-    .popup {
-        top: 390px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 390px !important;
+    /* Adjust the top position if needed */
+  }
 }
 
 .popup-content {
-    background-color: #fff;
-    margin: 4% auto;
-    padding: 20px;
-    border: 1.5px solid black;
-    border-radius: 2rem;
-    width: 98%;
-    max-width: 500px;
-    position: relative;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    -webkit-animation: fadeIn 0.3s;
-            animation: fadeIn 0.3s;
+  background-color: #fff;
+  margin: 4% auto;
+  padding: 20px;
+  border: 1.5px solid black;
+  border-radius: 2rem;
+  width: 98%;
+  max-width: 500px;
+  position: relative;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
 }
 
 .popup-content .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #aaa;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .popup-content .close:hover,
 .popup-content .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
-.custom-px-2{
-    padding-left: 1rem;
-     padding-right: 1rem;
+
+.custom-px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.custom-padding{
-    padding: 1rem;
+
+.custom-padding {
+  padding: 1rem;
 }
+
 @media (max-width: 555px) {
-    .custom-px-2{
-        padding-left: 0rem;
-        padding-right: 2rem;
-    }
-    .custom-padding{
-        padding: 0rem !important;
-    }
-   .popup-content{
+  .custom-px-2 {
+    padding-left: 0rem;
+    padding-right: 2rem;
+  }
+
+  .custom-padding {
+    padding: 0rem !important;
+  }
+
+  .popup-content {
     width: 95% !important;
-   }
-   .popup {
-      z-index: 999 !important;
-      top: 0px !important;
-      background-color: transparent !important;
+  }
+
+  .popup {
+    z-index: 999 !important;
+    top: 0px !important;
+    background-color: transparent !important;
+  }
 }
+
+.custom-modal-flex {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  font-weight: bold;
 }
-.custom-modal-flex{
-    display: flex; 
-    align-items: top; 
-    justify-content: space-between; 
-    font-weight: bold;
+
+.modal-span-text-color {
+  color: #E16700;
 }
-.modal-span-text-color{
-    color: #E16700;
+
+.how-to-row {
+  margin-top: 0rem;
+  text-align: center;
 }
-.how-to-row{
-    margin-top: 0rem;
-     text-align: center;   
-}
+
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
 /* Fixed Buttons Positioned at Bottom Right */
 .fixed-buttons {
-    position: fixed;
-    bottom: 70px;
-    right: 22px;
-    text-align: right;
-    z-index: 1000;
+  position: fixed;
+  bottom: 70px;
+  right: 22px;
+  text-align: right;
+  z-index: 1000;
 }
 
 .fixed-buttons a {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .nft-container span {
-    font-family: 'Days One', sans-serif; /* Apply Days One font to the text */
+  font-family: 'Days One', sans-serif;
+  /* Apply Days One font to the text */
 }
 
 .nft-container {
-    display: flex;
-    align-items: center;  /* Keeps the image and text aligned in the center vertically */
-    gap: 10px;  /* Adds space between the image and the text */
+  display: flex;
+  align-items: center;
+  /* Keeps the image and text aligned in the center vertically */
+  gap: 10px;
+  /* Adds space between the image and the text */
 }
-a{
-    text-decoration: none !important;
+
+a {
+  text-decoration: none !important;
 }
+
 .nft-text {
-    display: flex;
-    color: black;
-    flex-direction: column;
-    align-items: flex-start;  /* Aligns text to the left */
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Aligns text to the left */
 }
 
 .nft-text span {
-    display: block;  /* Ensures each span takes up its own line */
+  display: block;
+  /* Ensures each span takes up its own line */
 }
 
 /* Styles for the container around the NFT link and GIF */
 .fixed-buttons .nft-container {
-    background-color: rgba(221, 221, 221, 0.5); /* White background with opacity */
-    border: 0px solid rgb(48, 48, 48); /* Black border for the container */
-    border-radius: 15px; /* Rounded edges for the container */
-    padding: 8px; /* Padding inside the container */
-    display: flex; /* Use flexbox to align the image and text side by side */
-    align-items: flex; /* Aligns items vertically in the center */
-    justify-content: center; /* Centers items horizontally */
-    gap: 10px; /* Adds space between the GIF */
+  background-color: rgba(221, 221, 221, 0.5);
+  /* White background with opacity */
+  border: 0px solid rgb(48, 48, 48);
+  /* Black border for the container */
+  border-radius: 15px;
+  /* Rounded edges for the container */
+  padding: 8px;
+  /* Padding inside the container */
+  display: flex;
+  /* Use flexbox to align the image and text side by side */
+  align-items: flex;
+  /* Aligns items vertically in the center */
+  justify-content: center;
+  /* Centers items horizontally */
+  gap: 10px;
+  /* Adds space between the GIF */
 }
 
 .fixed-buttons img {
-    width: 55px; /* Resize the GIF as needed */
-    height: auto; /* Maintains the aspect ratio of the GIF */
-    border: 0px solid rgb(48, 48, 48); /* Adds border around the GIF */
-    border-radius: 5px; /* Rounded edges for the GIF */
+  width: 55px;
+  /* Resize the GIF as needed */
+  height: auto;
+  /* Maintains the aspect ratio of the GIF */
+  border: 0px solid rgb(48, 48, 48);
+  /* Adds border around the GIF */
+  border-radius: 5px;
+  /* Rounded edges for the GIF */
 }
 
 /* Specific styles targeting the book icon inside the fixed buttons */
 .fixed-buttons a[href="/book"] img {
-    border: none; /* Removes any border */
-    background: none; /* Removes any background */
+  border: none;
+  /* Removes any border */
+  background: none;
+  /* Removes any background */
 }
 
 /* Alternatively, if you want to ensure no other styles affect it indirectly */
 .fixed-buttons a[href="/book"] img {
-    border: none !important;
-    background: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 .logo img {
-    width: 40px;
-    height: auto;
+  width: 40px;
+  height: auto;
 }
+
 @media (min-width: 1706px) {
-    .popup {
-        top: 402px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 402px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 1024px) {
 
-    .banner-section {
-        min-height: 95vh;
-    }
+  .banner-section {
+    min-height: 95vh;
+  }
 }
+
 @media (max-width: 913px) {
-    .popup {
-        top: 722px !important; /* Adjust the top position if needed */
-    }
-    .banner-section {
-        min-height: 95vh;
-    }
+  .popup {
+    top: 722px !important;
+    /* Adjust the top position if needed */
+  }
+
+  .banner-section {
+    min-height: 95vh;
+  }
 }
+
 @media (max-width: 861px) {
-    .popup {
-        top: 640px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 640px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 821px) {
-    .popup {
-        top: 540px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 540px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 769px) {
-    .popup {
-        top: 390px !important; /* Adjust the top position if needed */
-    }
+  .popup {
+    top: 390px !important;
+    /* Adjust the top position if needed */
+  }
 }
+
 @media (max-width: 542px) {
-    .popup {
-        top: 112px !important;
-        left: 131px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
+  .popup {
+    top: 112px !important;
+    left: 131px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
 }
 
 @media (max-width: 431px) {
-    .nft-collection {
-        min-height: 84vh !important;
-    }
-    .popup {
-        display: none;
-        position: fixed;
-        z-index: 999;
-        left: -10px !important; /* Position to the right side */
-        top: 328px !important; /* Position to the top */
-        width: 440px; /* Adjust width as needed */
-        height: auto; /* Adjust height as needed or set a specific height */
-        padding: 20px; /* Add some padding */
-        border-radius: 8px; /* Optional: Add border radius for rounded corners */
-    }
-}
-@media (max-width: 401px) {
-    .popup {
-        left: -26px !important; /* Position to the right side */
-        top: 255px !important; /* Position to the top */
-        width: 440px; /* Adjust width as needed */
-    }
-  
-}
-@media (max-width: 415px) {
-    .popup {
-        left: -9px !important;
-        top: 287px !important;
-    }
-  
-}
-@media (max-width: 391px) {
-    .popup {
-        left: -24px !important;
-        top: 238px !important;
-    }
-  
-}
-@media (max-width: 381px) {
-    .popup {
-        top: 55px !important; /* Position to the top */
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-}
-@media (max-width: 361px) {
-    .popup {
-        top: 125px !important; /* Position to the top */
-        left: -42px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-}
-@media (max-width: 351px) {
-    .popup {
-        top: 275px !important; /* Position to the top */
-        left: -30px !important;
-    }
-    .popup-content {
-        width: 87% !important;
-    }
-    .popup {
-   
-        width: 417px; /* Adjust width as needed */
+  .nft-collection {
+    min-height: 84vh !important;
+  }
 
-    }
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: -10px !important;
+    /* Position to the right side */
+    top: 328px !important;
+    /* Position to the top */
+    width: 440px;
+    /* Adjust width as needed */
+    height: auto;
+    /* Adjust height as needed or set a specific height */
+    padding: 20px;
+    /* Add some padding */
+    border-radius: 8px;
+    /* Optional: Add border radius for rounded corners */
+  }
+}
+
+@media (max-width: 401px) {
+  .popup {
+    left: -26px !important;
+    /* Position to the right side */
+    top: 255px !important;
+    /* Position to the top */
+    width: 440px;
+    /* Adjust width as needed */
+  }
+
+}
+
+@media (max-width: 415px) {
+  .popup {
+    left: -9px !important;
+    top: 287px !important;
+  }
+
+}
+
+@media (max-width: 391px) {
+  .popup {
+    left: -24px !important;
+    top: 238px !important;
+  }
+
+}
+
+@media (max-width: 381px) {
+  .popup {
+    top: 55px !important;
+    /* Position to the top */
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+}
+
+@media (max-width: 361px) {
+  .popup {
+    top: 125px !important;
+    /* Position to the top */
+    left: -42px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+}
+
+@media (max-width: 351px) {
+  .popup {
+    top: 275px !important;
+    /* Position to the top */
+    left: -30px !important;
+  }
+
+  .popup-content {
+    width: 87% !important;
+  }
+
+  .popup {
+
+    width: 417px;
+    /* Adjust width as needed */
+
+  }
 }
