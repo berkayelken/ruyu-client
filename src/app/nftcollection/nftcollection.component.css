@@ -2528,6 +2528,7 @@ a {
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .slider {
@@ -2635,9 +2636,9 @@ a {
 }
 
 @media (max-width: 768px) {
-    .main-container {
+    /* .main-container {
       flex-direction: column-reverse;
-    }
+    } */
 
     .slider-section{
         margin-top: 0 !important;
