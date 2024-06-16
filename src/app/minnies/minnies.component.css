@@ -48,7 +48,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center, center;
-  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -610,7 +609,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -652,10 +650,20 @@ body {
 
 @supports ( -webkit-touch-callout : none) {
   .banner-section {
-  background-attachment:scroll !important;
+  background-attachment:scroll;
   }
   .banner-section2 {
-    background-attachment:scroll !important;
+    background-attachment:scroll;
+    }
+  }
+
+  @supports not (-webkit-touch-callout : none) {
+    .banner-section {
+      background-attachment: fixed;
+    }
+  
+    .banner-section2 {
+      background-attachment: fixed
     }
   }
 
