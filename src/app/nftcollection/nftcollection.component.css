@@ -116,6 +116,47 @@ body {
 }
 
 
+@media (max-width: 480px) {
+  .banner-section {
+    background-image: url('../../assets/nftcollection/bannerportrait.webp') !important;
+    background-size: 100% 100% !important;
+  }
+
+  
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .banner-section {
+    background-image: url('../../assets/nftcollection/bannerportraittablet.webp') !important;
+    background-size: 100% 100% !important;
+  }
+
+  
+}
+
+@media (min-width: 769px) and (max-width : 1024px) {
+  .banner-section {
+    background-image: url('../../assets/nftcollection/bannerlandscapetablet.webp') !important;
+    background-size: 100% 100% !important;
+  }
+
+  
+}
+
+@supports ( -webkit-touch-callout : none) {
+  .banner-section {
+  background-attachment:scroll;
+  }
+  
+  }
+
+  @supports not (-webkit-touch-callout : none) {
+    .banner-section {
+      background-attachment: fixed;
+    }
+  
+    
+  }
 
 .slider {
   height: auto;
@@ -681,6 +722,7 @@ body {
   bottom: 100px;
   left: 70px;
   position: absolute;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .banner-content2 h1 {
@@ -751,15 +793,18 @@ body {
   position: absolute;
   font-weight: bold;
   color: #000;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 .december-2023 {
+  font-family: 'Montserrat', sans-serif;
   top: 4.8rem;
   left: 18rem;
 }
 
 .december-2023-details {
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
   width: 15rem;
   top: 4.8rem;
@@ -778,6 +823,7 @@ body {
   top: 12.2rem;
   left: 29rem;
   font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ruyui-honoraries {
@@ -802,6 +848,7 @@ body {
 }
 
 .launch-magic-eden {
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
   width: 15rem;
   top: 26rem;
@@ -944,6 +991,7 @@ body {
     top: 4.8rem;
     left: 10rem;
     font-size: 0.8rem;
+    
   }
 
   .q2-2024 {
@@ -1992,7 +2040,10 @@ a {
   width: 15rem;
   top: 64.2rem;
 }
-
+.block3-more-content4 {
+  width: 15rem;
+  top: 62rem;
+}
 .block4 {
   top: 68.2rem;
   left: 31.7rem;

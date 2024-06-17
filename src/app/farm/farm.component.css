@@ -82,7 +82,7 @@ body{
 /* banner-section */
 .banner-section{
     position: relative;
-    background-image: url("../../assets/farm/PinBoardWide.webp"); ;
+    background-image: url("../../assets/farm/PinboardDesktop.webp"); ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,12 +137,12 @@ body{
     
 @media screen and (orientation:portrait) {
     .banner-section {
-        background-image: url("../../assets/farm/PinBoardTight.webp");
+        background-image: url("../../assets/farm/PinboardMobile.webp");
      }
 }
 
 @media screen and (orientation:landscape) {
     .banner-section {
-        background-image: url("../../assets/farm/PinBoardWide.webp");
+        background-image: url("../../assets/farm/PinboardDesktop.webp");
      }
 }

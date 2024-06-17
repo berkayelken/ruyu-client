@@ -103,6 +103,61 @@ body {
   }
 }
 
+/*BANNER2*/
+
+.banner-content2 {
+  width: auto;
+  height: auto;
+  background: rgba(54, 54, 54, 0.662);
+  border-radius: 40px;
+  top: 50%;     /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust position to truly center the element */
+  position: absolute;
+}
+.banner-content2 h1 {
+  color: #fff6ee;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: 'Days One', sans-serif;
+}
+
+.banner-content2 p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  /* Adjust font size if necessary */
+  color: #ffffff;
+  font-weight: 400;
+}
+
+@media (max-width: 568px) {
+  .banner-content2 {
+    width: 320px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    top: 50%;     /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust position to truly center the element */
+    position: absolute;
+  }
+
+  .banner-content2 h1 {
+    font-size: 14px;
+  }
+
+  .banner-content2 p {
+    font-size: 12px;
+    /* Adjust font size if necessary */
+  }
+}
+
+@media (max-width: 428px) {
+  .banner-content2 {
+    width: 260px;
+  }
+}
+
+
 /* nft-collection */
 .nft-collection {
   background-color: #F4F2EC;

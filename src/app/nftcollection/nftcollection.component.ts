@@ -18,21 +18,36 @@ export class NftcollectionComponent {
   slidesStore: any[] = []
   currentImages: any[] = []
   userNames: String[] = [
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
-    'voxelqueen',
+    'mdudas',
+    'YKarkai',
+    'threadguy',
+    'pranksy',
+    'ClaireSilver12',
+    '3orovik',
+    'krybharat',
+    'digitalartchick',
+    '9gagceo',
+    'ramongovea',
+    'aeyakovenko',
+    'beeple',
+    'beaniemaxi',
+    'bearsnake',
+    'deekaymotion',
+    'dingalingts',
+    '0xleoinrio',
+    'sartoshi_rip',
+    'seedphrase',
+    'zeneca',
+    'charl3svii',
+    'lphaCentauriKid',
+    'Nakamigos',
+    'Bold_Leonidas'
   ]
 
   constructor() {}
 
   ngOnInit(): void {
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 25; i++) {
       let image = this.cardString + i + '.webp'
       let userName = this.userNames[i - 1]
       this.slidesStore.push({ id: i, src: image, userName: userName })
