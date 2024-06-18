@@ -1,14 +1,15 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
 export const backendRequestInterceptor: HttpInterceptorFn = (req, next) => {
-  if (!req.url.startsWith("https://139.59.157.143:8080/api")) {
+  if (!req.url.startsWith("https://2ew7tn07qk.execute-api.eu-central-1.amazonaws.com/prod/api")) {
     return next(req);
-  } else if (req.url.startsWith('https://139.59.157.143:8080/api/auth/sign/in/twitter')) {
+  } 
+  
+  if (req.url.startsWith('https://2ew7tn07qk.execute-api.eu-central-1.amazonaws.com/prod/api/auth/sign/in/twitter')) {
     const authReq = req.clone({
       setHeaders: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
-        "rejectUnauthorized": "false"
+        "Accept": "application/json"
       }
     });
     return next(authReq);
@@ -17,8 +18,7 @@ export const backendRequestInterceptor: HttpInterceptorFn = (req, next) => {
       setHeaders: {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "rejectUnauthorized": "false",
-        "auth-token": "Bearer " + getToken()
+        "auth-token": `Bearer ${getToken()}`
       }
     });
     return next(authReq);

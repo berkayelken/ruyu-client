@@ -65,9 +65,9 @@ body {
 }
 
 .banner-content {
-  width: 420px;
-  height: 180px;
-  background: rgba(54, 54, 54, 0.5);
+  width: 270px;
+  height: 80px;
+  background: rgba(54, 54, 54, 0.779);
   border-radius: 40px;
   bottom: 100px;
   left: 70px;

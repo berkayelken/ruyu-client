@@ -16,7 +16,7 @@ import { AdminApproveTweetComponent } from './admin-approve-tweet/admin-approve-
 
 
 export const routes: Routes = [{ path: '', component: HomeComponent },
-{ path: 'farm', component: FarmComponent, data: { title: 'FARM $ROW' } },
+//{ path: 'farm', component: FarmComponent, data: { title: 'FARM $ROW' } },
 { path: 'minnies', component: MinniesComponent , data: { title: 'MINNIES' }},
 { path: 'nftcollection', component: NftcollectionComponent , data: { title: 'RUYUI NFT' }},
 { path: 'studio', component: StudioComponent ,data: { title: 'STUDIO' }},

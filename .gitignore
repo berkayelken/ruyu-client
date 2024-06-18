@@ -24,6 +24,7 @@ yarn-error.log
 *.p7b
 *.ca-bundle
 *.cer
+*.pem
 
 # Visual Studio Code
 .vscode/*

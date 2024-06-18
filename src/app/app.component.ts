@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet, ActivatedRoute, Router, NavigationEnd, RouterLink } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { filter, map } from 'rxjs/operators';
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
   authCookiePath = "RUYU_AUTH_CREDENTIALS"
   title = 'ruyu-client';
-  baseUrl = "https://139.59.157.143:8080/api"
+  baseUrl = "https://2ew7tn07qk.execute-api.eu-central-1.amazonaws.com/prod/api"
   name = ""
   imageUrl = "";
   authResponse: any;
@@ -96,7 +96,7 @@ export class AppComponent implements OnInit {
         if (loader) {
           loader.style.display = 'none';
         }
-      }, 1500); // Adjust the delay as needed (1000 ms = 1 second)
+      }, 2500); // Adjust the delay as needed (1000 ms = 1 second)
     }
 
   loginViaTwitter() {
@@ -166,6 +166,9 @@ export class AppComponent implements OnInit {
 
   openQuestModal() {
     let url = this.baseUrl + "/quest/user";
+    if (!this.getToken()) {
+      return;
+    }
     this.httpClient.get(url).subscribe((res) => {
       this.questResponse = res;
       let user = this.questResponse.user;
