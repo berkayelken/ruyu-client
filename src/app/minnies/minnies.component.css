@@ -7,6 +7,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #F4F2EC;;
 }
 
 /* navbar */
@@ -155,6 +156,29 @@ body {
   .banner-content2 {
     width: 260px;
   }
+}.tweet-slider {
+  margin-top: 0px; /* Adjust as needed */
+  background-color: #F4F2EC;
+}
+
+.tweet-slider .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-slider .owl-nav button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+}
+
+.tweet-slider .owl-dots {
+  text-align: center;
+  margin-top: 10px;
 }
 
 
@@ -163,6 +187,7 @@ body {
   background-color: #F4F2EC;
   min-height: 100vh;
   position: relative;
+  margin-bottom: 15px 0;
 }
 
 .nft-collection .text-content h1 {
@@ -617,7 +642,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #F4F2EC;
+  margin: 35px 0;
 }
 
 .slider-container {
@@ -629,7 +655,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #eeece9;
+  background-color: #F4F2EC;
 }
 
 .slider img {
@@ -1172,3 +1198,9 @@ footer .nav li a:hover {
   user-select: none;
   background: linear-gradient(to bottom, white, black);
 }
+
+.tweet-slider{
+  margin: 30px 0;
+}
+
+

@@ -396,3 +396,23 @@ a{
 
     }
 }
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.image-row img {
+    width: calc(25% - 10px);
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .image-row img {
+        width: calc(50% - 10px);
+    }
+}
+

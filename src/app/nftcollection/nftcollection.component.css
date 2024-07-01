@@ -18,16 +18,22 @@ body {
 
 .nav-item a {
   font-family: 'Montserrat', sans-serif;
-  color: black;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .navbar-nav {
-  background-color: rgba(221, 221, 221, 0.5);
+  background-color: rgba(24, 24, 24, 0.747);
   border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .nav-item a:hover {
-  color: #0a58ca;
+  color: #ff7300;
 }
 
 .navbar_button {
@@ -45,38 +51,27 @@ body {
 /* banner-section */
 .banner-section {
   position: relative;
-  background-image: url('../../assets/nftcollection/Banner.webp');
+  background-image: url('../../assets/nftcollection/DungeonBattle.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center, center;
   min-height: 100vh;
 }
 
-@supports (-webkit-touch-callout : none) {
-  .banner-section {
-    background-attachment: scroll;
-  }
-}
-
-@supports not (-webkit-touch-callout : none) {
-  .banner-section {
-    background-attachment: fixed;
-  }
-}
 
 .banner-content {
-  width: 270px;
+  width: 600px;
   height: 80px;
-  background: rgba(54, 54, 54, 0.779);
-  border-radius: 40px;
-  bottom: 100px;
+  background-color:rgba(24, 24, 24, 0.747); ;
+  border-radius: 20px;
+  bottom: 200px;
   left: 70px;
   position: absolute;
 }
 
 .banner-content h1 {
   color: #fff;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 500;
   font-family: 'Days One', sans-serif;
 }
@@ -116,9 +111,21 @@ body {
 }
 
 
+@supports (-webkit-touch-callout : none) {
+  .banner-section {
+    background-attachment: scroll;
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .banner-section {
+    background-attachment: fixed;
+  }
+}
+
 @media (max-width: 480px) {
   .banner-section {
-    background-image: url('../../assets/nftcollection/bannerportrait.webp') !important;
+    background-image: url('../../assets/nftcollection/DungeonPortrait.png') !important;
     background-size: 100% 100% !important;
   }
 
@@ -127,36 +134,86 @@ body {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .banner-section {
-    background-image: url('../../assets/nftcollection/bannerportraittablet.webp') !important;
+    background-image: url('../../assets/nftcollection/DungeonPortrait.png') !important;
     background-size: 100% 100% !important;
   }
-
-  
 }
 
+/* 
 @media (min-width: 769px) and (max-width : 1024px) {
   .banner-section {
     background-image: url('../../assets/nftcollection/bannerlandscapetablet.webp') !important;
     background-size: 100% 100% !important;
   }
+} */
 
-  
+  .nft-collection2 {
+    background-color: #F4F2EC;
+    position: relative;
+  }
+  .container {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    
 }
 
-@supports ( -webkit-touch-callout : none) {
-  .banner-section {
-  background-attachment:scroll;
-  }
-  
-  }
+.row{
+  margin-top: 60px;
+  color: #741e8f;
+  font-family: Days One;
+    width: 50%;
+}
+.row2 h1{
+  margin-top: 60px;
+  color: #000000;
+  font-family: Days One;
+  font-size: 20px !important;;
+  margin-bottom: 80px;
+}
 
-  @supports not (-webkit-touch-callout : none) {
-    .banner-section {
-      background-attachment: fixed;
-    }
-  
+.title {
+  margin-top: 100px;
+  font-family: Days One;
+    flex: 0;
+    display: flex;
+    color: #E16700;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.columns {
+  margin-top: 20px;
+    flex: 2;
+    display: flex;
+    width: 107%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0 40px;
     
-  }
+}
+
+.column{
+  flex:1;
+  margin: 0 20px;
+  
+}
+.column1 {
+  align-items: right;
+  text-align: right;
+  
+}
+.column2 {
+  align-items: left;
+  text-align: left;
+}
 
 .slider {
   height: auto;
@@ -201,14 +258,232 @@ body {
     margin-top: 20px;
   }
 }
+/* banner-section */
+.banner-section3 {
+  position: relative;
+  background-image: url('../../assets/THELORE/SunriseAndCharacter.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  min-height: 100vh;
+}
 
 
+@supports (-webkit-touch-callout : none) {
+  .banner-section3 {
+    background-attachment: scroll;
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .banner-section3 {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-section3 {
+    background-image: url('../../assets/THELORE/TheLore_Banner1_Portrait.webp') !important;
+    background-size: 100% 100% !important;
+  }
+}
+
+
+
+.banner-content3 {
+  width: 500px;
+  height: 300px;
+  background: rgba(54, 54, 54, 0.486);
+  border-radius: 40px;
+  bottom: 100px;
+  left: 70px;
+  position: absolute;
+  text-align: left;
+}
+
+.banner-content3 h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Days One', sans-serif;
+}
+
+.banner-content3 p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  /* Adjust font size if necessary */
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+@media (max-width: 568px) {
+  .banner-content3 {
+    width: 320px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    bottom: 120px;
+    left: 40px;
+    position: absolute;
+  }
+
+  .banner-content3 h1 {
+    font-size: 14px;
+  }
+
+  .banner-content3 p {
+    font-size: 12px;
+    /* Adjust font size if necessary */
+  }
+}
+
+@media (max-width: 428px) {
+  .banner-content3 {
+    width: 260px;
+  }
+}
+
+
+
+  .image-text-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #F4F2EC;
+}
+
+.image-text-section h2 {
+    font-family: Days One;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+.image-text-section p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        ". text ."
+        "image1 . image2"
+        "image3 . image4"
+        "image5 . image6";
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Custom styles for each image */
+.image1 img {
+    transform: rotate(-10deg);
+    border: 2px solid #ff583300;
+    width: 250px;
+    margin-top: 20px;
+}
+
+.image2 img {
+  margin-top: 10px;
+    transform: rotate(0deg);
+    border: 2px solid #00000000;
+    width: 250px;
+}
+
+.image3 img {
+    margin-top: 50px;
+    transform: rotate(0deg);
+    border: 2px solid #85ff3300;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.image4 img {
+    transform: rotate(0deg);
+    border: 2px solid #ff33a700;
+    width: 350px;
+    
+    margin-left: 120px;
+}
+
+.image5 img {
+    transform: rotate(-7deg);
+    border: 2px solid #ffd63300;
+    width: 180px;
+}
+
+.image6 img {
+    transform: rotate(12deg);
+    border: 2px solid #33ffbd;
+    width: 190px;
+}
+
+.text-center {
+    grid-area: text;
+    text-align: center;
+}
+
+.text-center h2 {
+    margin-bottom: 10px;
+}
+
+.text-center p {
+    margin: 0;
+}
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+        "text"
+        "image4";
+    gap: 10px;
+}
+
+.image1,
+.image2,
+.image3,
+.image5,
+.image6 {
+    display: none; 
+}
+
+.image1 img,
+.image2 img,
+.image3 img,
+.image4 img,
+.image5 img,
+.image6 img {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    transform: none; 
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+}
 /* ====================Hero Section======================== */
 .nft-collection {
   background-color: #F4F2EC;
   min-height: 100vh;
   position: relative;
 }
+
+
 
 .image-gallery {
   position: fixed;
@@ -766,6 +1041,94 @@ body {
   }
 }
 
+/* banner-section */
+.banner-section4 {
+  position: relative;
+  background-image: url('../../assets/THELORE/meetbob.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top, center;
+  min-height: 150vh;
+}
+@supports (-webkit-touch-callout : none) {
+  .banner-section4 {
+    background-attachment: scroll;
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .banner-section4 {
+    background-attachment: fixed;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .banner-section4 {
+    background-image: url('../../assets/THELORE/meetbob-portrait.gif') !important;
+    background-size: 100% 100% !important;
+    min-height: 80vh;
+  }
+}
+
+/* 
+@media (min-width: 769px) and (max-width : 1024px) {
+  .banner-section {
+    background-image: url('../../assets/nftcollection/bannerlandscapetablet.webp') !important;
+    background-size: 100% 100% !important;
+  }
+} */
+.banner-content4 {
+  width: 420px;
+  height: 180px;
+  background: rgba(54, 54, 54, 0.5);
+  border-radius: 40px;
+  bottom: 100px;
+  left: 70px;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner-content4 h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Days One', sans-serif;
+}
+
+.banner-content4 p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  /* Adjust font size if necessary */
+  color: #ffffff;
+  font-weight: 400;
+}
+
+@media (max-width: 568px) {
+  .banner-content4 {
+    width: 320px;
+    background: rgba(54, 54, 54, 0.5);
+    border-radius: 40px;
+    bottom: 120px;
+    left: 40px;
+    position: absolute;
+  }
+
+  .banner-content4 h1 {
+    font-size: 14px;
+  }
+
+  .banner-content4 p {
+    font-size: 12px;
+    /* Adjust font size if necessary */
+  }
+}
+
+@media (max-width: 428px) {
+  .banner-content2 {
+    width: 260px;
+  }
+}
 
 
 .bg_img {

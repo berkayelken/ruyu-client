@@ -1,137 +1,157 @@
 @import url("css/modal.css");
 @import url("css/landingPage.css");
 
-.number{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    transform-origin: bottom right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    cursor: pointer;
+.number {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: bottom right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
 }
 
-.number span{
-    position: relative;
-    text-align: center;
-    transform: rotate(45deg);
-    font-size: 0.85em;
-    font-weight: 500;
-    color: #fff;
-    text-shadow: 1.5px 2.5px 1px rgba(0,0,0,0.15);
+
+
+
+.number span {
+  position: relative;
+  text-align: center;
+  transform: rotate(45deg);
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 1.5px 2.5px 1px rgba(0, 0, 0, 0.15);
 }
 
 .img-fluid-2 {
-    position: absolute;
-    transform: rotate(45deg);
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensure the wheel image covers the container */
-    height: 100%;
-    display: block;
-    margin: 0 auto;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ensure the wheel image covers the container */
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .status-icon {
-    position: absolute;
-    top: calc(50% - 10px);
-    right: 15px;
-    width: 20px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 15px;
+  width: 20px;
+}
+
+.twitter-logo img{
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .sign-in-x {
-    border: 15px;
-    margin-top: 45px;
-    margin-left: 12px;
-    border-color: black;
-    color: whitesmoke;
-    background-color: black;
-    width: 160px;
-    height: 32px;
-    border-radius: 10px 10px 10px 10px;
+  border: 15px;
+  margin-top: 45px;
+  margin-left: 12px;
+  border-color: black;
+  color: whitesmoke;
+  background-color: black;
+  width: 160px;
+  height: 32px;
+  border-radius: 10px 10px 10px 10px;
 }
 
-.blurred{
-    -webkit-filter: blur(8px);
-    -moz-filter: blur(8px);
-    -o-filter: blur(8px);
-    -ms-filter: blur(8px);
-    filter: blur(8px);
+.blurred {
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
 }
 
-.x-container{
-    height: 150px;
+.x-container {
+  height: 150px;
 }
 
-.position-0{
-    transform: rotate(calc(0deg));
+.position-0 {
+  transform: rotate(calc(0deg));
 }
 
-.position-1{
-    transform: rotate(calc(30deg));
+.position-1 {
+  transform: rotate(calc(30deg));
 }
 
-.position-2{
-    transform: rotate(calc(30deg * 2));
+.position-2 {
+  transform: rotate(calc(30deg * 2));
 }
 
-.position-3{
-    transform: rotate(calc(30deg * 3));
+.position-3 {
+  transform: rotate(calc(30deg * 3));
 }
 
-.position-4{
-    transform: rotate(calc(30deg * 4));
+.position-4 {
+  transform: rotate(calc(30deg * 4));
 }
 
-.position-5{
-    transform: rotate(calc(30deg * 5));
+.position-5 {
+  transform: rotate(calc(30deg * 5));
 }
 
-.position-6{
-    transform: rotate(calc(30deg * 6));
+.position-6 {
+  transform: rotate(calc(30deg * 6));
 }
 
-.position-7{
-    transform: rotate(calc(30deg * 7));
+.position-7 {
+  transform: rotate(calc(30deg * 7));
 }
 
-.position-8{
-    transform: rotate(calc(30deg * 8));
+.position-8 {
+  transform: rotate(calc(30deg * 8));
 }
 
-.position-9{
-    transform: rotate(calc(30deg * 9));
+.position-9 {
+  transform: rotate(calc(30deg * 9));
 }
 
-.position-10{
-    transform: rotate(calc(30deg * 10));
+.position-10 {
+  transform: rotate(calc(30deg * 10));
 }
 
-.position-11{
-    transform: rotate(calc(30deg * 11));
+.position-11 {
+  transform: rotate(calc(30deg * 11));
+}
+
+.font-size-1 {
+  font-size: 1.5vh;
 }
 
 @media screen and (min-width: 569px) {
 
-    .sign-in-x {
-        width: 160px;
-    }
+  .sign-in-x {
+    width: 160px;
+  }
 }
 
 @media screen and (min-width: 400px) and (max-width: 568px) {
 
-    .sign-in-x {
-        margin-left: 24px;
-        width: 160px;
-    }
+  .sign-in-x {
+    margin-left: 24px;
+    width: 160px;
+  }
 }
 
 @media screen and (max-width: 399px) {
 
-    .sign-in-x {
-        margin-left: 12px;
-        width: 140px;
-    }
+  .sign-in-x {
+    margin-left: 12px;
+    width: 140px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .font-size-1 {
+    font-size: 1vh;
+  }
 }

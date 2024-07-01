@@ -1,0 +1,16 @@
+.video-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Apply border radius */
+    overflow: hidden; /* Ensure child elements are clipped */
+    max-height: 500px; /* Adjust max-height as needed */
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Apply border radius */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    border: 2px solid #f4f2ec; /* Adds a border color */
+  }
+  

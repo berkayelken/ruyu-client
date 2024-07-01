@@ -1,0 +1,774 @@
+/* banner-section */
+.banner-section {
+  position: relative;
+  background-color: #f4f2ec;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+
+
+}
+
+.stripe-layer {
+  background-image: url('../../assets/portfolio/portfolio8.png');
+  /* Adjust the color as needed */
+  height: 65vh;
+  /* Adjust the height as needed */
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.portfolio-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+}
+
+.portfolio-outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.portfolio-container {
+  width: 100%;
+  /* Adjust the width as needed */
+  max-width: 1000px;
+  /* Maximum width for the container */
+  border: 2px solid #f4f2ec;
+  /* Adds a border */
+  padding: 20px;
+  background-color: #f4f2ec;
+  /* Optional: background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: adds a shadow for depth */
+  border-radius: 50px;
+  /* Apply border radius */
+}
+
+.main-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.video-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  /* Apply border radius to wrapper */
+  overflow: hidden;
+  /* Ensure child elements are clipped */
+  max-width: 70%;
+  /* Adjust max-width as needed */
+  max-height: auto;
+}
+
+main-display video {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  /* Apply border radius */
+  border: 2px solid #dd8237;
+  /* Adds a border color */
+}
+
+.video-info {
+  flex: 0 0 300px;
+  /* Fixed width for the info section */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align items to the left */
+  text-align: left;
+  /* Ensure text is left-aligned */
+  width: 50%;
+
+}
+
+.video-info h2,
+.video-info p {
+  text-align: left;
+  /* Ensure text is left-aligned */
+  font-family: 'Days-One';
+}
+
+
+.thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.thumbnail-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.thumbnail-carousel {
+  width: 100%;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  /* Adjust this value to control the spacing between items */
+  padding: 5px;
+  /* Adjust this value to control the spacing inside items */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thumbnail-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Artist Portfolio Styles */
+.artist-portfolio-outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.artist-portfolio-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 2px solid #f4f2ec;
+  padding: 20px;
+  background-color: #f4f2ec;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.artist-portfolio-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.artist-portfolio-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+}
+
+.artist-main-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.artist-image-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 70%;
+  max-height: auto;
+}
+
+.artist-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #f4f2ec;
+  object-fit: cover;
+}
+
+.artist-info-section {
+  font-family: 'Days One', sans-serif;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+}
+
+
+.artist-info-section h2,
+.artist-info-section p {
+  text-align: left;
+  font-family: 'Days-One';
+}
+
+/* Ensure higher specificity for artist name */
+.artist-info-section h2.artist-name {
+  font-family: 'Days One', sans-serif !important;
+  font-size: 24px !important;
+  color: #333 !important;
+  /* Customize color if needed */
+}
+
+.artist-info-section p {
+  font-size: 14px !important;
+}
+
+.pixelArtist-info-section p {
+  font-size: 14px !important;
+}
+
+.artist-thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.artist-thumbnail-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.artist-thumbnail-carousel {
+  width: 100%;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.artist-thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.artist-thumbnail-container img {
+  max-width: 150px;
+  /* Adjust this value to control the width of the thumbnails */
+  height: 150px;
+  border-radius: 8px;
+  /* Optional: adds a border radius to the images */
+  object-fit: cover;
+  /* Ensures the image covers the container without distortion */
+  padding: 4px;
+  border: 2px solid #0000000d;
+}
+
+.artist-thumbnail-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@import "../css/modal.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* pixelArtist Portfolio Styles */
+.pixelArtist-portfolio-outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pixelArtist-portfolio-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 2px solid #f4f2ec;
+  padding: 20px;
+  background-color: #f4f2ec;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.pixelArtist-portfolio-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pixelArtist-portfolio-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+}
+
+.pixelArtist-main-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.pixelArtist-image-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 70%;
+  max-height: auto;
+}
+
+.pixelArtist-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #f4f2ec;
+  object-fit: cover;
+}
+
+.pixelArtist-info-section {
+  font-family: 'Days One', sans-serif;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+}
+
+
+.pixelArtist-info-section h2,
+.pixelArtist-info-section p {
+  text-align: left;
+  font-family: 'Days-One';
+}
+
+/* Ensure higher specificity for pixelArtist name */
+.pixelArtist-info-section h2.pixelArtist-name {
+  font-family: 'Days One', sans-serif !important;
+  font-size: 24px !important;
+  color: #333 !important;
+  /* Customize color if needed */
+}
+
+.pixelArtist-thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pixelArtist-thumbnail-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.pixelArtist-thumbnail-carousel {
+  width: 100%;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.pixelArtist-thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pixelArtist-thumbnail-container img {
+  max-width: 150px;
+  /* Adjust this value to control the width of the thumbnails */
+  border-radius: 8px;
+  /* Optional: adds a border radius to the images */
+  object-fit: cover;
+  /* Ensures the image covers the container without distortion */
+  height: 150px;
+  padding: 4px;
+  border: 2px solid #0000000d;
+}
+
+.pixelArtist-thumbnail-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* threeDArtist Portfolio Styles */
+.threeDArtist-portfolio-outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.threeDArtist-portfolio-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 2px solid #f4f2ec;
+  padding: 20px;
+  background-color: #f4f2ec;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.threeDArtist-portfolio-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.threeDArtist-portfolio-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+}
+
+.threeDArtist-main-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.threeDArtist-image-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 70%;
+  max-height: auto;
+}
+
+.threeDArtist-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #f4f2ec;
+  object-fit: cover;
+}
+
+.threeDArtist-info-section {
+  font-family: 'Days One', sans-serif;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+}
+
+
+.threeDArtist-info-section h2,
+.threeDArtist-info-section p {
+  text-align: left;
+  font-family: 'Days-One';
+}
+
+/* Ensure higher specificity for threeDArtist name */
+.threeDArtist-info-section h2.threeDArtist-name {
+  font-family: 'Days One', sans-serif !important;
+  font-size: 24px !important;
+  color: #333 !important;
+  /* Customize color if needed */
+}
+
+.threeDArtist-info-section p {
+  text-align: left;
+  font-family: 'Montserrat' !important;
+  font-size: 14px !important;
+}
+
+.threeDArtist-thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.threeDArtist-thumbnail-title {
+  font-family: 'Days One', sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.threeDArtist-thumbnail-carousel {
+  width: 100%;
+  height: auto;
+}
+
+.owl-carousel .owl-stage-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.threeDArtist-thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.threeDArtist-thumbnail-container img {
+  max-width: 150px;
+  /* Adjust this value to control the width of the thumbnails */
+  height: 150px;
+  border-radius: 8px;
+  /* Optional: adds a border radius to the images */
+  object-fit: cover;
+  /* Ensures the image covers the container without distortion */
+  padding: 4px;
+  border: 2px solid #0000000d;
+}
+
+.threeDArtist-thumbnail-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #e0daca;
+}
+
+/* navbar */
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
+.nav-item a {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+.navbar-nav {
+  background-color: #e0daca;
+  border-radius: 20px;
+}
+
+.nav-item a:hover {
+  color: #0a58ca;
+}
+
+.navbar_button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255, 103, 0, 0.6);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  padding: 5px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Days One;
+
+}
+
+.portfolio-section {
+  margin: 30px 0;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.main-display {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.thumbnail-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Allows thumbnails to wrap to the next line if needed */
+  max-width: auto;
+  /* Optional: limit the width of the thumbnail section */
+  margin-right: 20px;
+}
+
+
+/* scroll to top */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E16700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  font-weight: bold;
+  display: none;
+  /* Hidden by default */
+}
+
+.section-1 {
+  min-height: 100vh;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #dd8237;
+}
+
+@media (max-width: 768px) {
+  .main-display {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-wrapper,
+  .video-info {
+    max-width: 100%;
+  }
+
+  .thumbnail-section {
+    margin-top: 10px;
+  }
+
+  .video-info img {
+    height: 25%;
+    width: 25%;
+  }
+
+  .info-image {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .pixelArtist-main-display {
+    flex-direction: column;
+  }
+
+
+  .pixelArtist-info-section {
+    flex: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pixelArtist-image-wrapper {
+    max-width: 100%;
+  }
+
+  .artist-main-display {
+    flex-direction: column;
+  }
+
+
+  .artist-info-section {
+    flex: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .artist-image-wrapper {
+    max-width: 100%;
+  }
+
+  .threeDArtist-main-display {
+    flex-direction: column;
+  }
+
+
+  .threeDArtist-info-section {
+    flex: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .threeDArtist-image-wrapper {
+    max-width: 100%;
+  }
+}

@@ -4,6 +4,9 @@ import { RouterOutlet, ActivatedRoute, Router, NavigationEnd, RouterLink } from 
 import { HttpClient } from '@angular/common/http';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { filter, map } from 'rxjs/operators';
+import { RouterModule } from '@angular/router';
+
+
 
 // @ts-ignore
 const $: any = window['$']
@@ -11,12 +14,15 @@ const $: any = window['$']
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
+
+
 export class AppComponent implements OnInit {
+  
   server = "https://www.ruyui.com"
   twitterLoginFirstPart = "https://twitter.com/i/oauth2/authorize?response_type=code&client_id=WEJwTVdGXzFCWjF1c3dJTk1iZGw6MTpjaQ&redirect_uri="
   twitterLoginSecondPart = "&scope=tweet.read+users.read&state=state&code_challenge=challenge&code_challenge_method=plain"
@@ -149,7 +155,11 @@ export class AppComponent implements OnInit {
   isSuccessStatus(quest: Quest) {
     return "SUCCEED" === quest.statusForUser
   }
-
+  
+  get isNftCollectionRoute(): boolean {
+    return this.router.url === '/nftcollection';
+  }
+  
   private callAddUserName(quest: Quest) {
     let url = this.baseUrl + "/quest/enroll/add/platform" + quest.id
   
