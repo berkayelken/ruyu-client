@@ -1,0 +1,31 @@
+
+  .thumbnail img {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    padding: 4px;
+    border: 2px solid #0000000d;
+  }
+  
+  .thumbnail img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+  }
+  
+ 
+  
+  .thumbnail {
+    cursor: pointer;
+    margin: 10px; /* Adjust margin for spacing between thumbnails */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  
+  
+ 
+  /* Remove the title styling */
+  .thumbnail p {
+    display: none;
+  }
+  

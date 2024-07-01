@@ -1,0 +1,22 @@
+diff a/src/app/nftcollection/nftcollection.component.html b/src/app/nftcollection/nftcollection.component.html	(rejected hunks)
+@@ -90,13 +90,13 @@
+                   </p>
+               </div>
+           </div>
+-          <div class="col-lg-6 d-lg-block d-none">
+-            <div class="gif-container">
+-                <img id="gif1" alt="Scene-1" class="multi-gif img-fluid">
+-                <img id="gif2" alt="Scene-2" class="multi-gif img-fluid">
+-                <img id="gif3" alt="Scene-3" class="multi-gif img-fluid">
+-                <img id="gif4" alt="Scene-4" class="multi-gif img-fluid">
+-                <img id="gif5" alt="Scene-5" class="multi-gif img-fluid">
++          <div class="col-lg-6">
++            <div class="slider-container">
++              <div class="slider">
++                <div class="slider-item" *ngFor="let image of currentImages">
++                  <img [src]="image.src" [alt]="'Image ' + image.id">
++                </div>
++              </div>
+             </div>
+         </div>
+       </div>

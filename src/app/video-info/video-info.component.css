@@ -1,0 +1,20 @@
+.video-info {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Days-One';
+  }
+  
+  .video-info h2 {
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif; /* Use the Google Font */
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+  }
+  
+  .info-image {
+    height: 25%;
+    width: 25%;
+    max-width: 300px; /* Adjust the max-width as needed */
+    margin-bottom: 10px;
+  }
+  
